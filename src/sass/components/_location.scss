@@ -1,0 +1,100 @@
+.wrapper_location {
+    width: 100%;
+    min-width: 1652px;
+    color: #1a191b;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+.container_location {
+    width: 1652px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    padding-top: 225px;
+    position: relative;
+    background:  url('../img/french.png'), url('../img/spa.jpg');
+    background-repeat: no-repeat;
+    background-position-x: 620px, 0;
+    background-position-y: 100px, 320px;
+    padding-bottom: 70px;
+}
+.map {
+    width: 642px;
+    height: 770px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 61px 23px -7px;
+}
+.location-info {
+    padding-left: 645px;
+    width: 325px;
+}
+.title_location {
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 90px;
+    padding-top: 50px;
+    position: relative;
+}
+.title_location::before {
+    content: '';
+    border-bottom: 1px solid #7b7a7b;
+    display: inline-block;
+    width: 50px;
+    position: absolute;
+    top: 30px;
+    left: 5px;
+}
+.title_location::after {
+    content: '';
+    border-bottom: 1px solid #7b7a7b;
+    display: inline-block;
+    width: 50px;
+    position: absolute;
+    top: 30px;
+    left: 137px;
+}
+.container_location::before {
+    content: url('../img/style.png');
+    position: absolute;
+    left: 1352px;
+    top: 229px;
+}
+.street {
+    font-size: 16px;
+    line-height: 26px;
+    color: #4b4a4a;
+    font-weight: 500;
+    text-transform: none;
+    margin-bottom: 50px;
+}
+.street>span {
+    color: #1a191b;
+    font-weight: 700;
+}
+.our_time {
+    font-size: 16px;
+    line-height: 26px;
+    color: #4b4a4a;
+    font-weight: 500;
+    text-transform: none;
+    margin-bottom: 50px;
+}
+.our_time>span {
+    color: #1a191b;
+    font-weight: 700;
+}
+.phone_us {
+    font-size: 16px;
+    line-height: 26px;
+    color: #4b4a4a;
+    font-weight: 500;
+    text-transform: none;
+    margin-bottom: 50px;
+}
+.phone_us>span {
+    color: #1a191b;
+    font-weight: 700;
+}
