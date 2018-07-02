@@ -1,0 +1,230 @@
+header {
+    width: 1920px;
+    height: 960px;
+    background: url(../img/bg-header.png) no-repeat;
+    padding-bottom: 30px;
+}
+.header-container {
+    width: 85%;
+    margin: 0 auto;
+}
+.header-container__left-text {
+    color: #fff;
+    font-family: 'Prata-Regular';
+    font-size: 263px;
+    transform: rotate(90deg);
+    position: absolute;
+    left: -323px;
+    top: 448px;
+    margin: 0;
+}
+.header-nav {
+    padding-top: 25px;
+}
+.header-nav__visible {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    height: 50px;
+}
+.header-address {
+    margin-right: 60%;
+    font-family: 'Montserrat-Medium';
+    color: #232323; 
+    font-size: 14px;
+}
+.header-address::before {
+    content: url(../svg/icon-pin.svg)"";
+    display: inline-block;
+    width: 26px;
+    height: 19px;
+    margin-right: 10px;
+}
+.header-toggle {
+    width: 50px;
+    background-image: url(../img/icon-toggle.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.header-modal {
+    display: none;
+    height: 990px;
+    width: 335px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url(../img/bg-menu.png);
+    z-index: 1;
+}
+.modalDialog:target {
+    display: block;
+    pointer-events: auto;
+}
+.close {
+    content: "X";
+    display: block;
+    font-size: 30px;
+    font-family: "Montserrat-Regular";
+    color: #414141;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    text-decoration: none;
+}
+.header-modal-menu {
+    margin-top: 300px;
+}
+.header-modal-menu__list {
+    list-style: none;
+    line-height: 1.5;
+    padding: 12px 0;
+}
+.header-modal-menu__item {
+    color: #414141;
+    font-family: "Montserrat-Regular";
+    font-size: 22px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.header-modal__text {
+    font-family: "Prata-Regular";
+    font-size: 232px;
+    color: #fff;
+    opacity: .2;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 257px;
+    left: -96px;
+    margin: 0;
+    padding: 0;
+}
+.header-logo {
+    margin: 0 auto;
+    width: 285px;
+    height: 275px;
+    background: url(../img/logo.png) no-repeat;
+    background-size: contain;
+}
+.header-slogan {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+.header-slogan__title {
+    color: #414141;
+    font-family: "Montserrat-Regular";
+    font-size: 55px;
+    text-transform: uppercase;
+}
+.header-slogan__text {
+    color: #555;
+    font-family: "Montserrat-Regular";
+    font-size: 20px;
+}
+.header-slogan__text::before {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    border-bottom: 1px solid #232323;
+    position: absolute;
+    bottom: 223px;
+    left: 350px;
+}
+.header-slogan__text__upper {
+    color: #c0a38a;
+    font-family: 'Montserrat-Medium';
+    text-transform: uppercase;
+}
+.header-slogan__text::after {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    border-bottom: 1px solid #232323;
+    position: absolute;
+    bottom: 223px;
+    right: 350px;
+}
+.sing_up {
+    width: 290px;
+    height: 54px;
+    border: 1px solid #232323;
+    background-color: transparent;
+    padding: 21px 100px;
+    color: #232323;
+    font-family: "Myriad Pro";
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.sing_up:hover {
+    cursor: pointer;
+}
+.header-slogan > .sing_up {
+    margin-top: 140px;
+}
+.header-slogan > .sing_up::before {
+    content: "";
+    display: block;
+    height: 75px;
+    border-left: 1px solid #232323;
+    position: absolute;
+    top: 160px;
+    left: 50%;
+}
+.scrolldown {
+    width: 100px;
+    margin-left: 105px;
+    margin-top: 168px;
+}
+.scrolldown__text {
+    color: #555;
+    font-family: "Montserrat-Medium";
+    font-size: 14px;
+    transform: rotate(90deg);
+}
+.scrolldown__text::before {
+    content: "";
+    display: block;
+    width: 125px;
+    border-top: 1px solid #232323;
+    position: absolute;
+    top: 20px;
+    opacity: 0.15;
+}
+.telephone {
+    width: 200px;
+    position: absolute;
+    right: 105px;
+    top: 700px;
+}
+.telephone::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 460px;
+    border-left: 1px solid #232323;
+    opacity: 0.15;
+    position: absolute;
+    top: -575px;
+    left: 84px;
+}
+.telephone__text {
+    color: #232323;
+    font-family: "Montserrat-Medium";
+    font-size: 14px;
+    transform: rotate(90deg);
+    letter-spacing: 1px;
+}
+.telephone__text::before {
+    content: url(../svg/icon-phone-call.svg)"";
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+
+
+
