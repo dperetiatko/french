@@ -1,0 +1,104 @@
+.wrapper_gallery {
+    width: 100%;
+    min-width: 1652px;
+    color: #1a191b;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+.container_gallery {
+    width: 1652px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.title_gallery {
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 300;
+    width: 990px;
+    text-align: center;
+    margin-left:  auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-top: 70px;
+    position: relative;
+}
+.title_gallery>span {
+    font-weight: 400;
+    color: #c0a38a;
+}
+.subtitle_gallery {
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 60px;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+    color: #999999;
+}
+.list_gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin-bottom: 75px;
+}
+.list_gallery-item:nth-last-of-type(n+6) {
+    margin-bottom: 10px;
+}
+.text_galley {
+    font-weight: 300;
+    text-align: right;
+    text-transform: none;
+    margin-bottom: 135px;
+    position: relative;
+}
+.text_galley>span {
+    font-weight: 700;
+}
+.text_galley::before {
+    content: '';
+    display: inline-block;
+    width: 540px;
+    border-bottom: 1px solid #cccccc;
+    position: absolute;
+    left: 700px;
+    top: 11px;
+}
+.container_gallery::before {
+    content: url('../img/style.png');
+    position: absolute;
+    left: 790px;
+    top: 10px;
+}
+.title_gallery::before {
+    content: '';
+    border-bottom: 1px solid #7b7a7b;
+    display: inline-block;
+    width: 50px;
+    position: absolute;
+    top: 36px;
+    left: 398px;
+}
+.title_gallery::after {
+    content: '';
+    border-bottom: 1px solid #7b7a7b;
+    display: inline-block;
+    width: 50px;
+    position: absolute;
+    top: 36px;
+    left: 532px;
+}
+.list_gallery-link>img:hover {
+    transform: scale(0.9);
+}
+.list_gallery-link>img{
+    transition-duration: 200ms;
+    transition-delay: 50ms;
+}

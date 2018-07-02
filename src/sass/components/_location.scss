@@ -12,18 +12,18 @@
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    padding-top: 225px;
+    padding-top: 195px;
     position: relative;
     background:  url('../img/french.png'), url('../img/spa.jpg');
     background-repeat: no-repeat;
     background-position-x: 620px, 0;
-    background-position-y: 100px, 320px;
+    background-position-y: 50px, 270px;
     padding-bottom: 70px;
 }
 .map {
     width: 642px;
     height: 770px;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 61px 23px -7px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 40px 23px -7px;
 }
 .location-info {
     padding-left: 645px;
@@ -44,7 +44,7 @@
     display: inline-block;
     width: 50px;
     position: absolute;
-    top: 30px;
+    top: 29px;
     left: 5px;
 }
 .title_location::after {
@@ -53,14 +53,14 @@
     display: inline-block;
     width: 50px;
     position: absolute;
-    top: 30px;
+    top: 29px;
     left: 137px;
 }
 .container_location::before {
     content: url('../img/style.png');
     position: absolute;
     left: 1352px;
-    top: 229px;
+    top: 198px;
 }
 .street {
     font-size: 16px;

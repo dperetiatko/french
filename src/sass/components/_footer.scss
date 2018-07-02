@@ -1,0 +1,30 @@
+.footer {
+    width: 100%;
+    min-width: 1652px;
+    background-color: #f6f6f6;
+    font-size: 14px;
+    padding: 55px, 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.footer_container {
+    width: 1652px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+.link_footer_facebook {
+    margin-left: 491px;
+    margin-right: 25px;
+}
+.link_footer_insta {
+    padding-right: 32px;
+    border-right: 2px solid #1a191b;
+    margin-right: 93px;
+}
+.footer_text {
+    font-size: 14px;
+    font-weight: 500;
+}
