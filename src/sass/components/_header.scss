@@ -257,6 +257,8 @@ header {
 }
 .sing_up:hover {
     cursor: pointer;
+    background-color: #ccc;
+    color: #88233b;
 }
 .header-slogan > .sing_up::before {
     content: "";
@@ -338,5 +340,7 @@ header {
     text-align: center;
     text-decoration: none;
 }
-
+.sing_up__fixed:hover {
+    background-color: #d11b45;
+}
 
