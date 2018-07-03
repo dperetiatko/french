@@ -243,6 +243,8 @@ header {
     text-transform: uppercase;
     letter-spacing: 1px;
     text-decoration: none;
+    transition-delay: 50ms;
+    transition-duration: 200ms;
 }
 .sing_up:hover {
     cursor: pointer;
@@ -328,6 +330,8 @@ header {
     text-transform: uppercase;
     text-align: center;
     text-decoration: none;
+    transition-duration: 200ms;
+    transition-delay: 50ms;
 }
 .sing_up__fixed:hover {
     background-color: #d11b45;
