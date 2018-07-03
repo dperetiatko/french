@@ -133,11 +133,18 @@
     font-size: 14px;
 
 }
+.section-masters-form > input[type=text]:active,  
+                                        :hover,  
+                                        :focus { 
+    outline: 0; 
+    outline-offset: 0; 
+}
 .section-masters-form > input[type=text]{
     margin: 10px 0;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     border: none;
     border-bottom: 1px solid #94949446;
+    background: #fafafa;
 }
 .wrp > .sing_up {
     width: 180px;
