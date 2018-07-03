@@ -494,3 +494,35 @@
     font-family: 'Prata-Regular';
     font-size: 24px;
 }
+.container_services-counter {
+    width: 40px;
+    height: 200px;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 500px;
+    right: 15px;
+}
+.container_services-counter__text {
+    color: #4b4949;
+    font-family: "Prata-Regular";
+    font-size: 18px;
+}
+.container_services-counter__active {
+    font-weight: 900;
+}
+.container_services-counter::before,
+.container_services-counter::after {
+    content: url(../img/arrow.png)"";
+    display: block;
+    position: absolute;
+    top: -20px;
+}
+.container_services-counter::before {
+    transform: rotate(-90deg);
+    left: -68px;
+}
+.container_services-counter::after {
+    transform: rotate(90deg);
+    left: 100px;
+}
+
