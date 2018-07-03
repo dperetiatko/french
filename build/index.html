@@ -3,16 +3,166 @@
 
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>French beauty and nail laboratory</title>
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img/favicon/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&amp;subset=cyrillic" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&amp;subset=cyrillic" rel="stylesheet"> -->
     <link href="css/stylesheet.css" rel="stylesheet">
 </head>
 
 <body>
+    <!-- modal window -->
+    <div id="openModal-window" class="modal-window">
+        <div>
+            <div class="modal-window-logo"></div>
+            <a href="#close" title="Закрыть" class="modal-window-close">X</a>
+            <form class="modal-window-form">
+                <div class="modal-window-form-row">
+                    <input type="text" placeholder="Ваше имя">
+                </div>
+                <div class="modal-window-form-row">
+                    <input type="tel" placeholder="Ваш телефон">
+                </div>
+                <div class="modal-window-form-row">
+                    <input type="email" placeholder="Ваш email">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- modal window -->
+    <!-- header section -->
+    <header class="header">
+        <p class="header-container__left-text">french</p>
+        <div class="header-container">
+            <nav class="header-nav">
+                <div class="header-nav__visible">
+                    <div class="header-address">с 9.00 до 21.00 г. Киев, ул. Щорса, 44а</div>
+                    <a class="header-toggle" href="#openModal"></a>
+                </div>
+                    <div class="header-modal">
+                        <div id="openModal" class="modalDialog">
+                            <div>
+                                <a href="#close" title="Закрыть" class="close">X</a>
+                                <ul class="header-modal-menu">
+                                    <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">Услуги</a></li>
+                                    <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">мастера</a></li>
+                                    <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">косметика</a></li>
+                                    <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">отзывы</a></li>
+                                    <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">контакты</a></li>
+                                </ul>
+                                <p class="header-modal__text">beauty</p>
+                            </div>
+                        </div>
+                    </div>
+            </nav>
+        </div>
+        <div class="header-logo">
+            <div class="header-logo__img"></div>
+            <div class="header-logo__title"></div>
+            <p class="header-logo__text"></p>
+        </div>
+        <div class="header-slogan">
+            <h1 class="header-slogan__title">красота - не роскошная фантазия</h1>
+            <p class="header-slogan__text">студия ногтевого сервиса <span class="header-slogan__text__upper">french</span></p>
+            <a class="sing_up" href="#openModal-window">записаться</a>
+        </div>
+        <div class="scrolldown">
+            <p class="scrolldown__text">Scroll down</p>
+        </div>
+        <div class="telephone">
+            <p class="telephone__text">+38(068) 898-89-81</p>
+        </div>
+        <div class="fixed">
+            <a href="#openModal-window"  class="sing_up__fixed">онлайн-запись</a>
+        </div>
+    </header>
+    <!-- header section -->
+    
+    <!-- services section -->
+    <div class="wrapper_services">
+        <div class="container_services">
+            <ul class="list_services">
+                <li class="list_services-item"><a href="#">Ногтевая эстетика</a></li>
+                <li class="list_services-item"><a href="#">Волосы</a></li>
+                <li class="list_services-item"><a href="#">Уходовые ритуалы и лечение волос</a></li>
+                <li class="list_services-item"><a href="#">Макияж</a></li>
+                <li class="list_services-item"><a href="#">Архитектура бровей</a></li>
+                <li class="list_services-item"><a href="#">Косметология</a></li>
+                <li class="list_services-item"><a href="#">Лазерная эпиляция</a></li>
+            </ul>
+
+            <!-- slider light -->
+            <section class="slider_light">
+                <p class="slider_light-text_hair">Волосы</p>
+                <p class="slider_light-text_haircut">Вечерняя <br> <span>прическа</span> </p>
+                <p class="slider_light-text_price">400-550 ₴</p>
+                <ul class="list_service_light">
+                    <li class="list_service_light-item">Консультация мастера</li>
+                    <li class="list_service_light-item">Подбор прически</li>
+                    <li class="list_service_light-item">Рекомендации</li>
+                    <li class="list_service_light-item">Укладочный материал</li>
+                    <li class="list_service_light-item">Укладка</li>
+                </ul>
+                <a class="link_enroll_light" href="#openModal-window">Записаться</a>
+            </section>
+
+            <!-- slider dark -->
+            <!-- <section class="slider_dark">
+                <p class="slider_dark-text_hair">Макияж</p>
+                <p class="slider_dark-text_haircut">Макияж
+                        <span>вечерний</span> </p>
+                <p class="slider_dark-text_price">700 ₴</p>
+                <ul class="list_service_dark">
+                    <li class="list_service_dark-item">Консультация мастера</li>
+                    <li class="list_service_dark-item">Подбор макияжа</li>
+                    <li class="list_service_dark-item">Процесс наложения макияжа</li>
+                    <li class="list_service_dark-item">Рекомендации </li>
+                    <li class="list_service_dark-item">Еще какой-то текст</li>
+                </ul>
+                <a class="link_enroll_dark" href="#openModal-window">Записаться</a>
+            </section> -->
+            <div class="container_services-counter">
+                <p class="container_services-counter__text"> <span class="container_services-counter__active">05</span>/08</p>
+            </div>
+        </div>
+    </div>
+    <!-- services section -->
+    
+        <!-- masters section -->
+        <section class="section-masters">
+            <div class="section-masters__logo"></div>
+            <h2 class="section-masters__title">Наши мастера</h2>
+            <div class="section-masters-wrap">
+                    <p class="section-masters__text">cosmetic</p>
+                <div class="section-masters__item">
+                    <div class="section-masters-switch"> <span class="section-masters-switch__active">01</span> / 04</div>
+                    <div class="section-masters__card">
+                        <img src="img/ava-master.jpg" alt="" class="section-masters__img">
+                        <div class="wrp">
+                            <h4 class="section-masters__card__title">Татьяна Высокова</h4>
+                            <ul class="section-masters-list">
+                                <li class="section-masters-list__item">Специальность:................................. <span class="list__item-bold"> Косметолог</span></li>
+                                <li class="section-masters-list__item">Образование:............................................. <span class="list__item-bold"> высшее</span></li>
+                                <li class="section-masters-list__item">Опыт работы:.................................................... <span class="list__item-bold"> 5 лет</span></li>
+                                <form class="section-masters-form">
+                                    <p class="section-masters-form__text">Хотите к этому мастеру?</p>
+                                    <input type="text" name="name" placeholder="Ваше имя">
+                                    <input type="text" name="phone" placeholder="Ваш телефон">
+                                </form>
+                            </ul>
+                            <a href="#openModal-window" class="sing_up">записаться к мастеру</a>
+                        </div>
+                    </div>
+                    <div class="section-masters__right-pic">
+                        <img src="img/right-pic__item1.png" alt="" class="section-masters__right-pic__item">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- masters section -->
+    
     <div class="wrapper_premium">
         <div class="container_premium">
             <img src="./img/beauty.jpg" alt="Beauty woman">

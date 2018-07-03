@@ -5,7 +5,7 @@
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-Regular';
 }
 .container_location {
     width: 1652px;
@@ -37,6 +37,7 @@
     margin-bottom: 90px;
     padding-top: 50px;
     position: relative;
+    font-family: 'Montserrat-Light';
 }
 .title_location::before {
     content: '';

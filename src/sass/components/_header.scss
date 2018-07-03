@@ -8,9 +8,6 @@
     left: 0;
     background: url(../img/bg-modal.png) no-repeat;
     z-index: 99999;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
     display: none;
 }
 .modal-window > div {
@@ -56,27 +53,16 @@
     margin: 10px 0;
     
 }
-.modal-window-form input[type=text] {
-    width: 250px;
-    padding: 10px 30px;
-    background-color: rgba(255, 255, 255, 0.288);
-    font-family: 'Montserrat-Regular';
-    border: none;
-}
-.modal-window-form input[type=tel] {
-    width: 250px;
-    padding: 10px 30px;
-    background-color: rgba(255, 255, 255, 0.288);
-    font-family: 'Montserrat-Regular';
-    border: none;
-}
+.modal-window-form input[type=text],
+.modal-window-form input[type=tel],
 .modal-window-form input[type=email] {
     width: 250px;
-    padding: 10px 30px;
+    padding: 20px 30px;
     background-color: rgba(255, 255, 255, 0.288);
     font-family: 'Montserrat-Regular';
     border: none;
 }
+
 .modal-window:target {
     display: block;
     pointer-events: auto;
@@ -100,6 +86,7 @@ header {
     margin: 0 auto;
     background: url(../img/bg-header.png) no-repeat;
     padding-bottom: 30px;
+    position: relative;
 }
 .header-container {
     width: 85%;
@@ -111,7 +98,7 @@ header {
     font-size: 263px;
     transform: rotate(90deg);
     position: absolute;
-    left: -323px;
+    left: -329px;
     top: 448px;
     margin: 0;
 }
@@ -219,7 +206,7 @@ header {
     color: #555;
     font-family: "Montserrat-Regular";
     font-size: 20px;
-    margin-bottom: 196px;
+    margin-bottom: 158px;
 }
 .header-slogan__text::before {
     content: "";
@@ -227,7 +214,7 @@ header {
     width: 100px;
     border-bottom: 1px solid #232323;
     position: absolute;
-    bottom: 223px;
+    bottom: 188px;
     left: 350px;
 }
 .header-slogan__text__upper {
@@ -241,7 +228,7 @@ header {
     width: 100px;
     border-bottom: 1px solid #232323;
     position: absolute;
-    bottom: 223px;
+    bottom: 188px;
     right: 350px;
 }
 .sing_up {
@@ -251,17 +238,18 @@ header {
     background-color: transparent;
     padding: 21px 100px;
     color: #232323;
-    font-family: "Myriad Pro";
+    font-family: "Montserrat-SemiBold";
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-decoration: none;
+    transition-delay: 50ms;
+    transition-duration: 200ms;
 }
 .sing_up:hover {
     cursor: pointer;
-}
-.header-slogan > .sing_up {
-    margin-top: 140px;
+    background-color: #ccc;
+    color: #88233b;
 }
 .header-slogan > .sing_up::before {
     content: "";
@@ -274,8 +262,8 @@ header {
 }
 .scrolldown {
     width: 100px;
-    margin-left: 105px;
-    margin-top: 168px;
+    margin-left: 112px;
+    margin-top: 210px;
 }
 .scrolldown__text {
     color: #555;
@@ -295,8 +283,8 @@ header {
 .telephone {
     width: 200px;
     position: absolute;
-    right: 20px;
-    top: 700px;
+    right: 135px;
+    top: 730px;
 }
 .telephone::before {
     content: "";
@@ -307,7 +295,7 @@ header {
     opacity: 0.15;
     position: absolute;
     top: -575px;
-    left: 84px;
+    left: 90px;
 }
 .telephone__text {
     color: #232323;
@@ -342,6 +330,10 @@ header {
     text-transform: uppercase;
     text-align: center;
     text-decoration: none;
+    transition-duration: 200ms;
+    transition-delay: 50ms;
 }
-
+.sing_up__fixed:hover {
+    background-color: #d11b45;
+}
 

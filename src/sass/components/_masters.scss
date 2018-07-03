@@ -1,7 +1,7 @@
 .section-masters {
     width: 100%;
     min-width: 1652px;
-    margin: 90px auto 0 auto;
+    margin: 90px auto 170px auto;
     position: relative;
 }
 .section-masters__logo {
@@ -10,6 +10,7 @@
     width: 100px;
     height: 59px;
     margin: 0 auto;
+    position: relative;
 }
 .section-masters__logo::before,
 .section-masters__logo::after {
@@ -19,14 +20,13 @@
     border-bottom: 1px solid #19191b;
     opacity: .56;
     position: absolute;
+    top: 40px;
 }
 .section-masters__logo::before {
-    top: 40px;
-    left: 845px;
+    left: 125px;
 }
 .section-masters__logo::after {
-    top: 40px;
-    right: 845px;
+    right: 125px;
 }
 .section-masters__title {
     color: #1a191b;
@@ -43,7 +43,7 @@
 .section-masters-switch {
     width: 240px;
     height: 40px;
-    margin-left: 248px;
+    margin-left: 120px;
     color: #4b4949;
     font-family: "Prata-Regular";
     font-size: 14px;
@@ -61,12 +61,12 @@
 }
 .section-masters-switch::before {
     top: -38px;
-    left: 175px;
+    left: 40px;
     transform: rotate(-90deg);
 }
 .section-masters-switch::after {
     top: -37px;
-    left: 345px;
+    left: 230px;
     transform: rotate(90deg);
 }
 .section-masters__text {
@@ -77,11 +77,11 @@
     margin: 0;
     z-index: -1;
     position: absolute;
-    top: 157px;
-    right: 53px;
+    top: -150px;
+    right: -63px;
 }
 .section-masters__card {
-    width: 1040px;
+    width: 1010px;
     height: 665px;
     background-color: #fafafa;
     display: flex;
@@ -91,7 +91,7 @@
     height: 665px;
 }
 .wrp {
-    margin: 45px 0 0 100px;
+    margin: 45px 0 0 60px;
 }
 .section-masters__card__title {
     color: #19191b;
@@ -103,6 +103,7 @@
 }
 .section-masters-list {
     padding: 0;
+    margin-block-end: 35px;
 }
 .section-masters-list__item {
     list-style: none;
@@ -128,22 +129,25 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
+    font-family: "Montserrat-Light";
+    font-size: 14px;
+
 }
-input[type=text]{
+.section-masters-form > input[type=text]{
     margin: 10px 0;
     padding-bottom: 10px;
     border: none;
     border-bottom: 1px solid #94949446;
 }
 .wrp > .sing_up {
-    width: 300px;
-    padding: 0;
-    margin-left: 200px;
+    width: 180px;
+    padding: 15px 20px;
+    margin-left: 272px;
 }
 .section-masters__right-pic__item {
     width: 671px;
     height: 723px;
     position: absolute;
     top: 40px;
-    right: -80px;
+    right: -42px;
 }

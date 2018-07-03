@@ -5,7 +5,7 @@
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-Regular';
 }
 .container_gallery {
     width: 1652px;
@@ -15,6 +15,7 @@
     position: relative;
 }
 .title_gallery {
+    font-family: 'Montserrat-Light';
     font-size: 50px;
     line-height: 60px;
     font-weight: 300;
@@ -23,21 +24,24 @@
     margin-left:  auto;
     margin-right: auto;
     margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 0;
     padding-top: 70px;
     position: relative;
 }
 .title_gallery>span {
+    font-family: 'Montserrat-Regular';
     font-weight: 400;
     color: #c0a38a;
 }
 .subtitle_gallery {
+    font-family: 'Montserrat-Regular';
     text-align: center;
     font-weight: 600;
     font-size: 20px;
     line-height: 60px;
     text-transform: uppercase;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
+    margin-top: 0;
     color: #999999;
 }
 .list_gallery {
@@ -49,6 +53,7 @@
     list-style: none;
     margin-bottom: 75px;
     padding: 0;
+    margin-top: 0;
 }
 .list_gallery-item:nth-last-of-type(n+6) {
     margin-bottom: 10px;
