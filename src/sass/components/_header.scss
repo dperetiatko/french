@@ -53,27 +53,16 @@
     margin: 10px 0;
     
 }
-.modal-window-form input[type=text] {
-    width: 250px;
-    padding: 10px 30px;
-    background-color: rgba(255, 255, 255, 0.288);
-    font-family: 'Montserrat-Regular';
-    border: none;
-}
-.modal-window-form input[type=tel] {
-    width: 250px;
-    padding: 10px 30px;
-    background-color: rgba(255, 255, 255, 0.288);
-    font-family: 'Montserrat-Regular';
-    border: none;
-}
+.modal-window-form input[type=text],
+.modal-window-form input[type=tel],
 .modal-window-form input[type=email] {
     width: 250px;
-    padding: 10px 30px;
+    padding: 20px 30px;
     background-color: rgba(255, 255, 255, 0.288);
     font-family: 'Montserrat-Regular';
     border: none;
 }
+
 .modal-window:target {
     display: block;
     pointer-events: auto;
