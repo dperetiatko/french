@@ -1,6 +1,5 @@
 .wrapper_gallery {
     width: 100%;
-    min-width: 1652px;
     color: #1a191b;
     font-size: 18px;
     text-transform: uppercase;
@@ -8,7 +7,7 @@
     font-family: 'Montserrat-Regular';
 }
 .container_gallery {
-    width: 1652px;
+    width: 85%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -16,10 +15,10 @@
 }
 .title_gallery {
     font-family: 'Montserrat-Light';
-    font-size: 50px;
-    line-height: 60px;
+    font-size: 3vw;
+    line-height: 3vw;
     font-weight: 300;
-    width: 990px;
+    width: 70%;
     text-align: center;
     margin-left:  auto;
     margin-right: auto;
@@ -37,10 +36,10 @@
     font-family: 'Montserrat-Regular';
     text-align: center;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 1.3vw;
     line-height: 60px;
     text-transform: uppercase;
-    margin-bottom: 80px;
+    margin-bottom: 5vh;
     margin-top: 0;
     color: #999999;
 }
@@ -51,7 +50,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     list-style: none;
-    margin-bottom: 75px;
+    margin-bottom: 5vh;
     padding: 0;
     margin-top: 0;
 }
@@ -59,6 +58,8 @@
     margin-bottom: 10px;
 }
 .text_galley {
+    font-size: 1vw;
+    width: 83vw;
     font-weight: 300;
     text-align: right;
     text-transform: none;
@@ -71,35 +72,37 @@
 .text_galley::before {
     content: '';
     display: inline-block;
-    width: 540px;
+    width: 20vw;
     border-bottom: 1px solid #cccccc;
     position: absolute;
-    left: 700px;
-    top: 11px;
+    right: 23vw;
+    top: 1.5vh;
 }
-.container_gallery::before {
-    content: url('../img/style.png');
-    position: absolute;
-    left: 790px;
-    top: 10px;
+.logo_gallery {
+    text-align: center;
+    width: 100%;
+    // margin-top: 20px;
+    position: relative;
+    top: 40px;
+    left: -0.1vw;
 }
-.title_gallery::before {
+.logo_gallery::before {
     content: '';
     border-bottom: 1px solid #7b7a7b;
     display: inline-block;
-    width: 50px;
+    width: 2.5vw;
     position: absolute;
-    top: 36px;
-    left: 398px;
+    top: 25px;
+    left: 43%;
 }
-.title_gallery::after {
+.logo_gallery::after {
     content: '';
     border-bottom: 1px solid #7b7a7b;
     display: inline-block;
-    width: 50px;
+    width: 2.5vw;
     position: absolute;
-    top: 36px;
-    left: 532px;
+    top: 25px;
+    left: 54%;
 }
 .list_gallery-link>img:hover {
     transform: scale(0.9);
@@ -107,4 +110,7 @@
 .list_gallery-link>img{
     transition-duration: 200ms;
     transition-delay: 50ms;
+}
+.list_gallery-item>a>img {
+    width: 15vw;
 }
