@@ -1,14 +1,13 @@
 .section-masters {
     width: 100%;
-    min-width: 1652px;
-    margin: 90px auto 170px auto;
+    margin: 40px auto 170px auto;
     position: relative;
 }
 .section-masters__logo {
     background: url(../img/logo-small.png) no-repeat;
-    background-size: cover;
-    width: 100px;
-    height: 59px;
+    background-size: contain;
+    width: 9%;
+    height: 35px;
     margin: 0 auto;
     position: relative;
 }
@@ -20,25 +19,25 @@
     border-bottom: 1px solid #19191b;
     opacity: .56;
     position: absolute;
-    top: 40px;
+    top: 24px;
 }
 .section-masters__logo::before {
-    left: 125px;
+    left: 73px;
 }
 .section-masters__logo::after {
-    right: 125px;
+    right: 127px;
 }
 .section-masters__title {
     color: #1a191b;
     font-family: "Montserrat-Light";
-    font-size: 50px;
+    font-size: 35px;
     text-transform: uppercase;
     text-align: center;
 }
 .section-masters-wrap {
-    width: 1625px;
+    width: 90%;
     position: relative;
-    margin: 140px auto 0 auto;
+    margin: 80px auto 0 auto;
 }
 .section-masters-switch {
     width: 240px;
@@ -55,9 +54,10 @@
 }
 .section-masters-switch::before,
 .section-masters-switch::after {
-    content: url(../img/arrow.png)"";
+    content: "";
     display: block;
     position: absolute;
+    background-image: url(../img/arrow.png);
 }
 .section-masters-switch::before {
     top: -38px;
@@ -72,23 +72,23 @@
 .section-masters__text {
     color: #f5f5f5;
     font-family: "Prata-Regular";
-    font-size: 279px;
+    font-size: 186px;
     padding: 0;
     margin: 0;
     z-index: -1;
     position: absolute;
-    top: -150px;
-    right: -63px;
+    top: -80px;
+    right: -65px;
 }
+
 .section-masters__card {
-    width: 1010px;
-    height: 665px;
     background-color: #fafafa;
     display: flex;
+    width: 66%;
 }
 .section-masters__img {
-    width: 385px;
-    height: 665px;
+    width: 275px;
+    height: 466px;
 }
 .wrp {
     margin: 45px 0 0 60px;
@@ -96,7 +96,7 @@
 .section-masters__card__title {
     color: #19191b;
     font-family: "Montserrat-SemiBold";
-    font-size: 24px;
+    font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 45px;
@@ -109,21 +109,24 @@
     list-style: none;
     color: #19191b;
     font-family: "Montserrat-Regular";
-    font-size: 17px;
-    margin: 30px 0;
+    font-size: 11px;
+    margin: 15px 0;
     letter-spacing: 2px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
 }
 .list__item-bold {
     font-family: "Montserrat-Bold";
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 10px;
 }
 .section-masters-form__text {
     color: #19191b;
     font-family: "Montserrat-Medium";
-    font-size: 18px;
+    font-size: 13px;
     text-transform: uppercase;
-    margin: 80px 0 50px 0;
+    margin: 40px 0 33px 0;
 }
 .section-masters-form {
     display: flex;
@@ -145,16 +148,21 @@
     border: none;
     border-bottom: 1px solid #94949446;
     background: #fafafa;
+    width: 90%;
+    font-size: 10px;
 }
 .wrp > .sing_up {
     width: 180px;
-    padding: 15px 20px;
-    margin-left: 272px;
+    padding: 10px 25px;
+    margin: 20px 0 0 140px
 }
-.section-masters__right-pic__item {
-    width: 671px;
-    height: 723px;
+.section-masters__right-pic {
+    
     position: absolute;
     top: 40px;
-    right: -42px;
+    right: -34px;
+}
+.section-masters__right-pic__item {
+    width: 100%;
+    height: 509px;
 }
