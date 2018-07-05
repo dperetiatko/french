@@ -37,37 +37,42 @@
 .section-masters-wrap {
     width: 90%;
     position: relative;
-    margin: 80px auto 0 auto;
+    margin: 100px auto 0 auto;
 }
-.section-masters-switch {
-    width: 240px;
-    height: 40px;
-    margin-left: 120px;
-    color: #4b4949;
-    font-family: "Prata-Regular";
-    font-size: 14px;
-}
-.section-masters-switch__active {
-    color: #686868;
-    font-family: "Prata-Regular";
-    font-size: 18px;
-}
-.section-masters-switch::before,
-.section-masters-switch::after {
-    content: "";
-    display: block;
-    position: absolute;
-    background-image: url(../img/arrow.png);
-}
-.section-masters-switch::before {
-    top: -38px;
-    left: 40px;
-    transform: rotate(-90deg);
-}
-.section-masters-switch::after {
-    top: -37px;
-    left: 230px;
-    transform: rotate(90deg);
+// .section-masters-switch {
+//     width: 240px;
+//     height: 40px;
+//     margin-left: 120px;
+//     color: #4b4949;
+//     font-family: "Prata-Regular";
+//     font-size: 14px;
+// }
+// .section-masters-switch__active {
+//     color: #686868;
+//     font-family: "Prata-Regular";
+//     font-size: 18px;
+// }
+// .section-masters-switch::before,
+// .section-masters-switch::after {
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     background-image: url(../img/arrow.png);
+// }
+// .section-masters-switch::before {
+//     top: -38px;
+//     left: 40px;
+//     transform: rotate(-90deg);
+// }
+// .section-masters-switch::after {
+//     top: -37px;
+//     left: 230px;
+//     transform: rotate(90deg);
+// }
+.section-masters__item > .container_services-counter {
+    transform: rotate(0deg);
+    top: -40px;
+    left: 102px;
 }
 .section-masters__text {
     color: #f5f5f5;
@@ -77,7 +82,7 @@
     margin: 0;
     z-index: -1;
     position: absolute;
-    top: -80px;
+    top: -120px;
     right: -65px;
 }
 
@@ -157,10 +162,10 @@
     margin: 20px 0 0 140px
 }
 .section-masters__right-pic {
-    
     position: absolute;
-    top: 40px;
+    top: 0;
     right: -34px;
+    width: 38%;
 }
 .section-masters__right-pic__item {
     width: 100%;
