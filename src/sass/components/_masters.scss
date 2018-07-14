@@ -39,36 +39,7 @@
     position: relative;
     margin: 100px auto 0 auto;
 }
-// .section-masters-switch {
-//     width: 240px;
-//     height: 40px;
-//     margin-left: 120px;
-//     color: #4b4949;
-//     font-family: "Prata-Regular";
-//     font-size: 14px;
-// }
-// .section-masters-switch__active {
-//     color: #686868;
-//     font-family: "Prata-Regular";
-//     font-size: 18px;
-// }
-// .section-masters-switch::before,
-// .section-masters-switch::after {
-//     content: "";
-//     display: block;
-//     position: absolute;
-//     background-image: url(../img/arrow.png);
-// }
-// .section-masters-switch::before {
-//     top: -38px;
-//     left: 40px;
-//     transform: rotate(-90deg);
-// }
-// .section-masters-switch::after {
-//     top: -37px;
-//     left: 230px;
-//     transform: rotate(90deg);
-// }
+
 .section-masters__item > .container_services-counter {
     transform: rotate(0deg);
     top: -40px;
