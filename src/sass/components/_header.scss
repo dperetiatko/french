@@ -82,7 +82,7 @@
 
 // modal window
 header {
-    width: 100%;
+    min-width: 1200px;
     height: 690px;
     margin: 0 auto;
     padding-bottom: 30px;
@@ -134,8 +134,8 @@ header {
 }
 .header-modal {
     display: none;
-    height: 990px;
-    width: 335px;
+    height: 720px;
+    width: 269px;
     position: absolute;
     right: 0;
     top: 0;
@@ -158,7 +158,7 @@ header {
     text-decoration: none;
 }
 .header-modal-menu {
-    margin-top: 300px;
+    margin-top: 200px;
 }
 .header-modal-menu__list {
     list-style: none;
@@ -168,31 +168,31 @@ header {
 .header-modal-menu__item {
     color: #414141;
     font-family: "Montserrat-Regular";
-    font-size: 22px;
+    font-size: 20px;
     text-transform: uppercase;
     text-decoration: none;
 }
 .header-modal__text {
     font-family: "Prata-Regular";
-    font-size: 232px;
+    font-size: 190px;
     color: #fff;
     opacity: .2;
     transform: rotate(90deg);
     position: absolute;
-    top: 257px;
-    left: -96px;
+    top: 199px;
+    left: -15px;
     margin: 0;
     padding: 0;
 }
 .header-logo {
     margin: 0 auto;
-    width: 15%;
+    width: 200px;
     height: 148px;
     background: url(../img/logo.png) no-repeat;
     background-size: contain;
 }
 .header-slogan {
-    width: 90%;
+    width: 1150px;
     margin: 0 auto;
     text-align: center;
     position: relative;
@@ -200,7 +200,7 @@ header {
 .header-slogan__title {
     color: #414141;
     font-family: "Montserrat-Regular";
-    font-size: 33px;
+    font-size: 31px;
     text-transform: uppercase;
 }
 .header-slogan__text {

@@ -1,12 +1,12 @@
 .wrapper_services {
-    width: 100%;
+    min-width: 1200px;
     font-family: 'Montserrat', sans-serif;
     color: #1a191b;
     font-size: 11px;
     line-height: 20px;
 }
 .container_services {
-    width: 90%;
+    width: 1150px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,6 @@
     display: flex;
     justify-content: space-between;
     list-style: none;
-    min-width: 1117px;
 }
 .list_services-item > a {
     box-sizing: border-box;
