@@ -1,19 +1,20 @@
 .wrapper_reviews {
-    width: 100%;
+    min-width: 1200px;
     color: #1a191b;
     font-size: 16px;
     background-color: #f6f6f6;
     font-family: 'Montserrat-Regular';
-    background: url('../img/nail.png'), url('../img/beauty.png') #f6f6f6;
-    background-repeat: no-repeat, no-repeat;
-    background-position-x: 0%, 100%;
-    background-position-y: 130px, 0%;
+    background: url('../img/nail.png'), #f6f6f6;
+    background-repeat: no-repeat;
+    background-position-x: 0%;
+    background-position-y: 130px;
     position: relative;
     z-index: 0;
 }
 .container_reviews {
-    width: 85%;
-    margin: 0 auto;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -21,38 +22,38 @@
 .container_reviews::before {
     content: url('../img/style.png');
     position: absolute;
-    left: 40.5vw;
-    top: 20vh;
+    left: 552px;
+    top: 101px;
 }
 .title_reviews {
     font-family: 'Montserrat-Light';
     text-align: center;
     text-transform: uppercase;
-    font-size: 3vw;
-    line-height: 60px;
+    font-size: 40px;
+    line-height: 43px;
     font-weight: 300;
     color: #1a191b;
-    padding-top: 30vh;
-    padding-bottom: 12vh;
+    padding-top: 150px;
+    padding-bottom: 60px;
     margin: 0;
 }
 .title_reviews::before {
     content: '';
     border-bottom: 1px solid #7b7a7b;
     display: inline-block;
-    width: 2.5vw;
+    width: 35px;
     position: absolute;
-    top: 24vh;
-    left: 36vw;
+    top: 127px;
+    left: 508px;
 }
 .title_reviews::after {
     content: '';
     border-bottom: 1px solid #7b7a7b;
     display: inline-block;
-    width: 2.5vw;
+    width: 35px;
     position: absolute;
-    top: 24vh;
-    left: 47vw;
+    top: 127px;
+    left: 625px;
 }
 .list_reviews {
     display: flex;
@@ -69,11 +70,10 @@
 }
 .list_reviews-item>img {
     border-radius: 100%;
-    margin-bottom: 2vh;
+    margin-bottom: 10px;
     transition-duration: 200ms;
     transition-delay: 50ms;
     cursor: pointer;
-    width: 12vw;
     transform: scale(.7);
 }
 .list_reviews-item>img:hover {
@@ -82,7 +82,7 @@
 }
 .list_reviews-item_name {
     text-align: center;
-    font-size: 0.8vw;
+    font-size: 11px;
     text-transform: uppercase;
     font-weight: 700;
     margin-top: 0px;
@@ -90,7 +90,7 @@
 }
 .list_reviews-item_position {
     text-transform: lowercase;
-    font-size: .8vw;
+    font-size: 11px;
     color: #7e7e7e;
     text-align: center;
     font-weight: 700;
@@ -100,7 +100,7 @@
     background-color: #fff;
     padding-top: 65px;
     padding-bottom: 85px;
-    padding-left: 115px;
+    padding-left: 75px;
     display: flex;
     position: relative;
     box-shadow: 0px 30px 23px -7px rgba(0,0,0,0.08);
@@ -111,36 +111,38 @@
     color: #a9a9a9;
     font-weight: 600;
     margin-top: 0;
-    margin-bottom: 2vh;
-    font-size: .8vw;
+    margin-bottom: 10px;
+    font-size: 11px;
 }
 .review-name {
-    font-size: 1.6vw;
-    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Montserrat-Bold';
     margin-top: 0;
-    margin-bottom: 5.6vh;
+    margin-bottom: 40px;
 }
 .review-text {
-    width: 55%;
-    font-size: 1vw;
-    line-height: 4vh;
+    width: 80%;
+    font-size: 12px;
+    line-height: 22px;
     margin-top: 0px;
+    margin-bottom: 20px;
 }
 .review-article {
-    padding-right: 7vw;
+    padding-right: 100px;
 }
-.review>img {
+.review>picture>img {
     position: absolute;
-    width: 45vw;
-    top: -2.5vw;
-    left: 40vw;
+    top: -80px;
+    left: 48%;
+    transform: scale(0.85);
 }
 .link_review {
     position: absolute;
-    top: 68vh;
-    left: 35vw;
+    top: 360px;
+    left: 430px;
     width: 40px;
     height: 40px;
+    transform: scale(0.8);
 }
 .cp_block_secondary {
     position: absolute;
@@ -150,6 +152,142 @@
     left: 0;
     background: url('../img/brush.png'),#f6f6f6;
     background-repeat: repeat-x;
-    background-position-y: 10px;
+    background-position-y: 20px;
     z-index: 0;
+}
+.container_review-counter { 
+    width: 40px; 
+    height: 200px; 
+    position: absolute; 
+    top: 365px;
+    right: 685px;
+} 
+.container_review-counter__text { 
+    color: #4b4949; 
+    font-family: "Prata-Regular"; 
+    font-size: 12px; 
+} 
+.container_review-counter__active { 
+    font-weight: 900; 
+} 
+.container_review-counter::before, 
+.container_review-counter::after { 
+    content: url(../img/arrow.png)""; 
+    display: block; 
+    position: absolute; 
+    top: -27px;
+    transform: scale(0.8);
+} 
+.container_review-counter::before { 
+    transform: rotate(-90deg); 
+    left: -68px; 
+} 
+.container_review-counter::after { 
+    transform: rotate(90deg); 
+    left: 84px; 
+} 
+.reviews-sign {
+    position: absolute;
+    transform: rotateZ(-90deg);
+    font-family: 'Prata-Regular';
+    font-size: 280px;
+    top: 30px;
+    right: -420px;
+    color: #ffffff;
+}
+@media all and (max-width: 479px) {
+    .wrapper_reviews {
+        min-width: 290px;
+        background: #fefefe;
+    }
+    .reviews-sign {
+        display: none;
+    }
+    .review {
+        padding: 0;
+        width: 100%;
+    }
+    .review>picture>img {
+        transform: scale(1);
+        left: 0px;
+        top: 0px;
+    }
+    .container_review-counter {
+        top: -65px;
+        left: 125px;
+    }
+    .container_reviews {
+        width: 290px;
+        padding-bottom: 60px;
+        margin-bottom: 50px;
+    }
+    .container_reviews::before {
+        top: 42px;
+        left: 124px;
+        content: url('../img/logo-mobile.png');
+    }
+    .title_reviews {
+        font-size: 24px;
+        line-height: 32px;
+        padding-top: 80px;
+        padding-bottom: 0;
+        margin-bottom: 35px;
+    }
+    .title_reviews::before {
+        left: 80px;
+        top: 60px;
+    }
+    .title_reviews::after {
+        left: 175px;
+        top: 60px;
+    }
+    .list_reviews {
+        padding-bottom: 70px;
+    }
+    .list_reviews-item {
+        display: none;
+        transform: scale(1.2);
+        margin-bottom: 20px;
+    }
+    .list_reviews-item_name {
+        font-family: 'Montserrat-Bold';
+    }
+    .list_reviews-item:nth-of-type(2) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .review-article {
+        width: 290px;
+        padding: 0;
+        padding-top: 200px;
+        box-shadow: 0 0px 23px -7px rgba(0,0,0,.08);
+    }
+    .review-name {
+        display: none;
+    }
+    .review-position {
+        display: none;
+    }
+    .review-text {
+        padding-top:35px;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 90%;
+        font-size: 14px;
+    }
+    .review-text>br {
+        display: none;
+    }
+    .cp_block_secondary {
+        display: none;
+    }
+    .link_review {
+        left: 241px;
+        top: 151px;
+        z-index: 3;
+    }
+    .list_reviews-item>img {
+        box-shadow: 0 30px 23px -7px rgba(0,0,0,.08);
+    }
 }

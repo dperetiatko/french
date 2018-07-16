@@ -2,7 +2,7 @@ body {
     font-size: 14px;
 }
 .wrapper_location {
-    width: 100%;
+    min-width: 1200px;
     color: #1a191b;
     font-size: 18px;
     text-transform: uppercase;
@@ -10,32 +10,31 @@ body {
     font-family: 'Montserrat-Regular';
 }
 .container_location {
-    width: 85%;
+    width: 1200px;
     margin-top: 0;
-    margin-left: 10%;
-    margin-right: 15%;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     padding-top: 100px;
     position: relative;
-    // background:  url('../img/french.png'), url('../img/spa.jpg');
+    // background:  url('../img/french.png');
     background-repeat: no-repeat;
-    background-position-x: 620px, 0;
-    background-position-y: 50px, 270px;
+    background-position-x: 620px;
+    background-position-y: 50px;
     padding-bottom: 70px;
 }
 .map {
-    width: 25%;
-    min-width: 400px;
-    height: 520px;
+    width: 37%;
+    height: 580px;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 40px 23px -7px;
     margin-left: 0;
 }
 .article_location {
     width: 35%;
-    margin-top: 5rem;
-    height: 450px;
+    margin-top: 50px;
+    height: 500px;
     background: url('../img/spa.jpg');
     background-attachment: contain;
     background-position-x: 600px;
@@ -43,75 +42,123 @@ body {
 }
 .location-info {
     width: 19%;
-    padding-left: 5rem;
+    padding-left: 50px;
     position: relative;
 }
 .title_location {
-    font-size: 2.5vw;
-    line-height: 3vw;
+    font-size: 40px;
+    line-height: 43px;
     font-weight: 300;
     margin: 0;
-    margin-bottom: 9vh;
-    padding-top: 9rem;
+    margin-bottom: 55px;
+    padding-top: 80px;
     position: relative;
     font-family: 'Montserrat-Light';
 }
 .street {
-    font-size: .8vw;
-    line-height: 1.5vw;
+    font-size: 12px;
+    line-height: 20px;
     color: #4b4a4a;
     text-transform: none;
-    margin-bottom: 4.3vh;
+    margin-bottom: 20px;
 }
 .location-logo {
     position: absolute;
     text-align: center;
-    left: 6.5vw;
-    top: 5vh;
+    left: 100px;
+    top: 26px;
 }
 .location-logo::before {
     content: '';
     border-bottom: 1px solid #7b7a7b;
     display: inline-block;
-    width: 2.5vw;
+    width: 35px;
     position: absolute;
     top: 25px;
-    left: -3.5vw;
+    left: -45px;
 }
 .location-logo::after {
     content: '';
     border-bottom: 1px solid #7b7a7b;
     display: inline-block;
-    width: 2.5vw;
+    width: 35px;
     position: absolute;
     top: 25px;
-    right: -3.5vw;
+    right: -45px;
 }
 .street>span {
     color: #1a191b;
     font-family: 'Montserrat-Bold';
 }
 .our_time {
-    font-size: .8vw;
-    line-height: 1.5vw;
+    font-size: 12px;
+    line-height: 20px;
     color: #4b4a4a;
     font-weight: 500;
     text-transform: none;
-    margin-bottom: 4.5vh;
+    margin-bottom: 20px;
 }
 .our_time>span {
     color: #1a191b;
     font-family: 'Montserrat-Bold';
 }
 .phone_us {
-    font-size: .8vw;
-    line-height: 1.5vw;
+    font-size: 12px;
+    line-height: 20px;
     color: #4b4a4a;
     font-weight: 500;
-    text-transform: none;
-    margin-bottom: 3vh;
+    text-transform: none;;
 }
 .phone_us>span {
     color: #1a191b;
     font-family: 'Montserrat-Bold';
+}
+
+@media all and (max-width: 479px) {
+    .wrapper_location {
+        min-width: 290px;
+    }
+    .container_location {
+        width: 290px;
+        flex-direction: column;
+        position: relative;
+        padding-top: 0;
+    }
+    .location-logo {
+        text-align: center;
+        left: 124px;
+        top: 10px;
+        // position: static;
+    }
+    .location-logo::before {
+        top: 17px;
+        left: -45px;
+    }
+    .location-logo::after {
+        top: 17px;
+        right: -45px;
+    }
+    .article_location {
+        display: none;
+    }
+    .map {
+        width: 100%;
+        height: 400px;
+        position: absolute;
+        top: 110px;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 15px 23px -7px;
+    }
+    .location-info {
+        padding: 0;
+        width: 100%;
+    }
+    .title_location {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 450px;
+        padding-top: 40px;
+    }
+    .street, .our_time, .phone_us {
+        font-size: 14px;
+    }
 }
