@@ -1,5 +1,5 @@
 .wrapper_gallery {
-    width: 100%;
+    min-width: 1200px;
     color: #1a191b;
     font-size: 18px;
     text-transform: uppercase;
@@ -7,16 +7,17 @@
     font-family: 'Montserrat-Regular';
 }
 .container_gallery {
-    width: 85%;
-    margin: 0 auto;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: column;
     position: relative;
 }
 .title_gallery {
     font-family: 'Montserrat-Light';
-    font-size: 3vw;
-    line-height: 3vw;
+    font-size: 40px;
+    line-height: 44px;
     font-weight: 300;
     width: 70%;
     text-align: center;
@@ -36,10 +37,10 @@
     font-family: 'Montserrat-Regular';
     text-align: center;
     font-weight: 600;
-    font-size: 1.3vw;
+    font-size: 18px;
     line-height: 60px;
     text-transform: uppercase;
-    margin-bottom: 5vh;
+    margin-bottom: 20px;
     margin-top: 0;
     color: #999999;
 }
@@ -50,7 +51,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     list-style: none;
-    margin-bottom: 5vh;
+    margin-bottom: 20px;
     padding: 0;
     margin-top: 0;
 }
@@ -58,25 +59,26 @@
     margin-bottom: 10px;
 }
 .text_galley {
-    font-size: 1vw;
-    width: 83vw;
+    font-size: 14px;
+    width: 30%;
+    margin-left: auto;
     font-weight: 300;
     text-align: right;
     text-transform: none;
-    margin-bottom: 135px;
+    margin-bottom: 100px;
     position: relative;
 }
 .text_galley>span {
-    font-weight: 700;
+    font-family: 'Montserrat-Bold';
 }
 .text_galley::before {
     content: '';
     display: inline-block;
-    width: 20vw;
+    width: 300px;
     border-bottom: 1px solid #cccccc;
     position: absolute;
-    right: 23vw;
-    top: 1.5vh;
+    right: 300px;
+    top: 10px;
 }
 .logo_gallery {
     text-align: center;
@@ -84,25 +86,24 @@
     // margin-top: 20px;
     position: relative;
     top: 40px;
-    left: -0.1vw;
 }
 .logo_gallery::before {
     content: '';
     border-bottom: 1px solid #7b7a7b;
     display: inline-block;
-    width: 2.5vw;
+    width: 35px;
     position: absolute;
     top: 25px;
-    left: 43%;
-}
+    left: 520px;
+}   
 .logo_gallery::after {
     content: '';
     border-bottom: 1px solid #7b7a7b;
     display: inline-block;
-    width: 2.5vw;
+    width: 35px;
     position: absolute;
     top: 25px;
-    left: 54%;
+    left: 645px;
 }
 .list_gallery-link>img:hover {
     transform: scale(0.9);
@@ -110,7 +111,8 @@
 .list_gallery-link>img{
     transition-duration: 200ms;
     transition-delay: 50ms;
+
 }
 .list_gallery-item>a>img {
-    width: 15vw;
+    width: 230px;
 }
