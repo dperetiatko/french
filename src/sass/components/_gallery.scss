@@ -148,14 +148,14 @@
             font-weight: 800;
         }
     }
-}
 
-.item {
-    margin: 3px;
-    max-width: calc(50% - 6px);
-    flex-basis: calc(50% - 6px);
-
-    &__image {
-        display: block;
+    .item {
+        margin: 3px;
+        max-width: calc(50% - 6px);
+        flex-basis: calc(50% - 6px);
+    
+        &__image {
+            display: block;
+        }
     }
 }
