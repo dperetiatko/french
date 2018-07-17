@@ -324,10 +324,22 @@
             </div>
         </div>
         <script>
+            var tabList = [
+                'Вкладка 1',
+                'Вкладка 2',
+                'Вкладка 3',
+                'Вкладка 4',
+                'Вкладка 5',
+                'Вкладка 6',
+                'Вкладка 7',
+            ];
             $(".services .tab_item").not(":first").hide();
             $(".services__wrapper .tab").click(function() {
+                var currentText = tabList[$(this).index()]
                 $(".services__wrapper .tab").removeClass("active-tab").eq($(this).index()).addClass("active-tab");
-                $(".services .tab_item").hide().eq($(this).index()).fadeIn()
+                $(".services .tab_item").hide().eq($(this).index()).fadeIn();
+                $(".services .tabs__current").html(currentText);
+                $(".services .tabs__list").toggleClass("tabs__list--opened");
             }).eq(0).addClass("active-tab");
 
             $(".services .tabs__current").click(function() {
