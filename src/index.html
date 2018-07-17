@@ -10,6 +10,12 @@
     <link rel="icon" href="img/favicon/favicon.png">
     <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&amp;subset=cyrillic" rel="stylesheet"> -->
     <link href="css/stylesheet.css" rel="stylesheet">
+    <script
+        src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="./js/owl.carousel.js"></script>
 </head>
 
 <body>
@@ -63,76 +69,285 @@
                     <div class="header-address">с 9.00 до 21.00 г. Киев, ул. Евгения Коновaльца 44а</div>
                     <a class="header-toggle" href="#openModal"></a>
                 </div>
-                    <div class="header-modal">
-                        <div id="openModal" class="modalDialog">
-                            <div>
-                                <a href="#close" title="Закрыть" class="close">X</a>
-                                <ul class="header-modal-menu">
-                                    <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">Услуги</a></li>
-                                    <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">мастера</a></li>
-                                    <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">косметика</a></li>
-                                    <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">отзывы</a></li>
-                                    <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">контакты</a></li>
-                                </ul>
-                                <p class="header-modal__text">beauty</p>
-                            </div>
+                <div class="header-modal">
+                    <div id="openModal" class="modalDialog">
+                        <div>
+                            <a href="#close" title="Закрыть" class="close">X</a>
+                            <ul class="header-modal-menu">
+                                <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">Услуги</a></li>
+                                <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">мастера</a></li>
+                                <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">косметика</a></li>
+                                <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">отзывы</a></li>
+                                <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">контакты</a></li>
+                            </ul>
+                            <p class="header-modal__text">beauty</p>
                         </div>
                     </div>
+                </div>
             </nav>
         </div>
     </header>
     <!-- header section -->
     
     <!-- services section -->
-    <!-- <div class="wrapper_services">
-        <div class="container_services">
-            <ul class="list_services">
-                <li class="list_services-item"><a href="#">Ногтевая эстетика</a></li>
-                <li class="list_services-item"><a href="#">Волосы</a></li>
-                <li class="list_services-item"><a href="#">Уходовые ритуалы и лечение волос</a></li>
-                <li class="list_services-item"><a href="#">Макияж</a></li>
-                <li class="list_services-item"><a href="#">Архитектура бровей</a></li>
-                <li class="list_services-item"><a href="#">Косметология</a></li>
-                <li class="list_services-item"><a href="#">Лазерная эпиляция</a></li>
-            </ul> -->
-
-            <!-- slider light -->
-            <!-- <section class="slider_light">
-                <div class="slider_light__top">
-                    <p class="slider_light-text_hair">Волосы</p>
-                    <p class="slider_light-text_haircut">Вечерняя <br> <span>прическа</span> </p>
-                    <p class="slider_light-text_price">400-550 ₴</p>
+    <section class="section services">
+        <div class="section__inner">
+            <div class="section__logo">
+                <img src="./img/style.png" alt="Logo picture">
+            </div>
+            <h2 class="section__title">
+                Основные услуги
+            </h2>
+            <div class="services__wrapper">
+                <div class="tabs">
+                    <div class="tabs__heading">
+                        Выбрать категорию:
+                    </div>
+                    <div class="tabs__wrapper">
+                        <div class="tabs__current">Вкладка 1</div>
+                        <ul class="tabs__list">
+                            <li class="tab">Вкладка 1</li>
+                            <li class="tab">Вкладка 2</li>
+                            <li class="tab">Вкладка 3</li>
+                            <li class="tab">Вкладка 4</li>
+                            <li class="tab">Вкладка 5</li>
+                            <li class="tab">Вкладка 6</li>
+                            <li class="tab">Вкладка 7</li>
+                        </ul>
+                    </div>      
                 </div>
-                <ul class="list_service_light">
-                    <li class="list_service_light-item">Консультация мастера</li>
-                    <li class="list_service_light-item">Подбор прически</li>
-                    <li class="list_service_light-item">Рекомендации</li>
-                    <li class="list_service_light-item">Укладочный материал</li>
-                    <li class="list_service_light-item">Укладка</li>
-                </ul>
-                <a class="link_enroll_light" href="#openModal-window">Записаться</a>
-            </section> -->
-
-            <!-- slider dark -->
-            <!-- <section class="slider_dark">
-                <p class="slider_dark-text_hair">Макияж</p>
-                <p class="slider_dark-text_haircut">Макияж
-                        <span>вечерний</span> </p>
-                <p class="slider_dark-text_price">700 ₴</p>
-                <ul class="list_service_dark">
-                    <li class="list_service_dark-item">Консультация мастера</li>
-                    <li class="list_service_dark-item">Подбор макияжа</li>
-                    <li class="list_service_dark-item">Процесс наложения макияжа</li>
-                    <li class="list_service_dark-item">Рекомендации </li>
-                    <li class="list_service_dark-item">Еще какой-то текст</li>
-                </ul>
-                <a class="link_enroll_dark" href="#openModal-window">Записаться</a>
-            </section> -->
-            <!-- <div class="container_services-counter">
-                <p class="container_services-counter__text"> <span class="container_services-counter__active">05</span>/08</p>
+                <div class="tab_content">
+                    <div class="tab_item">
+                        <h3>First carousel</h3>
+                        <div class="owl-carousel">
+                            <div class="item" data-hash="one">
+                                <h4>1</h4>
+                            </div>
+                            <div class="item" data-hash="two">
+                                <h4>2</h4>
+                            </div>
+                            <div class="item" data-hash="three">
+                                <h4>3</h4>
+                            </div>
+                            <div class="item" data-hash="four">
+                                <h4>4</h4>
+                            </div>
+                            <div class="item" data-hash="five">
+                                <h4>5</h4>
+                            </div>
+                            <div class="item" data-hash="six">
+                                <h4>6</h4>
+                            </div>
+                            <div class="item" data-hash="seven">
+                                <h4>7</h4>
+                            </div>
+                            <div class="item" data-hash="eight">
+                                <h4>8</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab_item">
+                        <h3>Second carousel</h3>
+                        <div class="owl-carousel">
+                            <div class="item" data-hash="one">
+                                <h4>1</h4>
+                            </div>
+                            <div class="item" data-hash="two">
+                                <h4>2</h4>
+                            </div>
+                            <div class="item" data-hash="three">
+                                <h4>3</h4>
+                            </div>
+                            <div class="item" data-hash="four">
+                                <h4>4</h4>
+                            </div>
+                            <div class="item" data-hash="five">
+                                <h4>5</h4>
+                            </div>
+                            <div class="item" data-hash="six">
+                                <h4>6</h4>
+                            </div>
+                            <div class="item" data-hash="seven">
+                                <h4>7</h4>
+                            </div>
+                            <div class="item" data-hash="eight">
+                                <h4>8</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab_item">
+                        <h3>Third carousel</h3>
+                        <div class="owl-carousel">
+                            <div class="item" data-hash="one">
+                                <h4>1</h4>
+                            </div>
+                            <div class="item" data-hash="two">
+                                <h4>2</h4>
+                            </div>
+                            <div class="item" data-hash="three">
+                                <h4>3</h4>
+                            </div>
+                            <div class="item" data-hash="four">
+                                <h4>4</h4>
+                            </div>
+                            <div class="item" data-hash="five">
+                                <h4>5</h4>
+                            </div>
+                            <div class="item" data-hash="six">
+                                <h4>6</h4>
+                            </div>
+                            <div class="item" data-hash="seven">
+                                <h4>7</h4>
+                            </div>
+                            <div class="item" data-hash="eight">
+                                <h4>8</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab_item">
+                        <h3>Fourth carousel</h3>
+                        <div class="owl-carousel">
+                            <div class="item" data-hash="one">
+                                <h4>1</h4>
+                            </div>
+                            <div class="item" data-hash="two">
+                                <h4>2</h4>
+                            </div>
+                            <div class="item" data-hash="three">
+                                <h4>3</h4>
+                            </div>
+                            <div class="item" data-hash="four">
+                                <h4>4</h4>
+                            </div>
+                            <div class="item" data-hash="five">
+                                <h4>5</h4>
+                            </div>
+                            <div class="item" data-hash="six">
+                                <h4>6</h4>
+                            </div>
+                            <div class="item" data-hash="seven">
+                                <h4>7</h4>
+                            </div>
+                            <div class="item" data-hash="eight">
+                                <h4>8</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab_item">
+                        <h3>Fifth carousel</h3>
+                        <div class="owl-carousel">
+                            <div class="item" data-hash="one">
+                                <h4>1</h4>
+                            </div>
+                            <div class="item" data-hash="two">
+                                <h4>2</h4>
+                            </div>
+                            <div class="item" data-hash="three">
+                                <h4>3</h4>
+                            </div>
+                            <div class="item" data-hash="four">
+                                <h4>4</h4>
+                            </div>
+                            <div class="item" data-hash="five">
+                                <h4>5</h4>
+                            </div>
+                            <div class="item" data-hash="six">
+                                <h4>6</h4>
+                            </div>
+                            <div class="item" data-hash="seven">
+                                <h4>7</h4>
+                            </div>
+                            <div class="item" data-hash="eight">
+                                <h4>8</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab_item">
+                        <h3>Sixth carousel</h3>
+                        <div class="owl-carousel">
+                            <div class="item" data-hash="one">
+                                <h4>1</h4>
+                            </div>
+                            <div class="item" data-hash="two">
+                                <h4>2</h4>
+                            </div>
+                            <div class="item" data-hash="three">
+                                <h4>3</h4>
+                            </div>
+                            <div class="item" data-hash="four">
+                                <h4>4</h4>
+                            </div>
+                            <div class="item" data-hash="five">
+                                <h4>5</h4>
+                            </div>
+                            <div class="item" data-hash="six">
+                                <h4>6</h4>
+                            </div>
+                            <div class="item" data-hash="seven">
+                                <h4>7</h4>
+                            </div>
+                            <div class="item" data-hash="eight">
+                                <h4>8</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab_item">
+                        <h3>Seventh carousel</h3>
+                        <div class="owl-carousel">
+                            <div class="item" data-hash="one">
+                                <h4>1</h4>
+                            </div>
+                            <div class="item" data-hash="two">
+                                <h4>2</h4>
+                            </div>
+                            <div class="item" data-hash="three">
+                                <h4>3</h4>
+                            </div>
+                            <div class="item" data-hash="four">
+                                <h4>4</h4>
+                            </div>
+                            <div class="item" data-hash="five">
+                                <h4>5</h4>
+                            </div>
+                            <div class="item" data-hash="six">
+                                <h4>6</h4>
+                            </div>
+                            <div class="item" data-hash="seven">
+                                <h4>7</h4>
+                            </div>
+                            <div class="item" data-hash="eight">
+                                <h4>8</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div> -->
+        <script>
+            $(".services .tab_item").not(":first").hide();
+            $(".services__wrapper .tab").click(function() {
+                $(".services__wrapper .tab").removeClass("active-tab").eq($(this).index()).addClass("active-tab");
+                $(".services .tab_item").hide().eq($(this).index()).fadeIn()
+            }).eq(0).addClass("active-tab");
+
+            $(".services .tabs__current").click(function() {
+                $(".services .tabs__list").toggleClass("tabs__list--opened");
+            });
+
+            $(document).ready(function(){
+                $(".services .owl-carousel").owlCarousel({
+                    loop:true,
+                    responsiveClass:true,
+                    responsive:{
+                        320:{
+                            items:1,
+                            nav:true
+                        },
+                    }
+                });
+            });
+        </script>
+    </section>
     <!-- services section -->
     
         <!-- masters section -->
@@ -287,10 +502,10 @@
     <!-- Gallery -->
     <section class="section gallery">
         <div class="section__inner">
-            <div class="gallery__logo">
+            <div class="section__logo">
                 <img src="./img/style.png" alt="Logo picture">
             </div>
-            <h3 class="gallery__title">Следим за мировыми трендами<span class="gallery__title--colored"> beauty-индустрии</span> и</h3>
+            <h2 class="section__title">Следим за мировыми трендами<span class="gallery__title--colored"> beauty-индустрии</span> и</h2>
             <p class="gallery__subtitle">предлагаем вам пробовать новинки первыми</p>
             <ul class="gallery__list">
                 <li class="item">
