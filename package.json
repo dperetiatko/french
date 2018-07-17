@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "del": "^3.0.0",
-    "imagemin-pngquant": "^5.0.1"
+    "imagemin-pngquant": "^5.0.1",
+    "owl.carousel": "^2.3.4"
   }
 }
