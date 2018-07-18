@@ -59,13 +59,17 @@
         display: flex;
         flex-wrap: wrap;
         margin: 0 -3px 30px;
+        justify-content: space-evenly;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     &__text {
         width: 240px;
         margin-left: auto;
-        font-size: 18px;
-        line-height: 22px;
+        font-size: 16px;
+        line-height: 20px;
         font-family: 'Montserrat-Light';
         text-align: right;
 
@@ -78,6 +82,9 @@
         display: block;
         width: 100%;
         object-fit: cover;
+    }
+    .item:nth-last-child(n+2) {
+        margin-bottom: 10px;
     }
 }
 
@@ -98,7 +105,9 @@
 
     .gallery {
         &__text {
-            width: 360px;
+            width: 80%;
+            margin-right: auto;
+            margin-left: auto;
             
             &::before {
                 content: "";
@@ -106,26 +115,42 @@
                 width: 300px;
                 border-top: 1px solid #efefef;
                 padding-top: 15px;
-                margin-left: 55px;
+                margin-left: auto;
+                margin-right: 0px;
             } 
         }
     }
     .gallery__list .item:last-child {
         display: none;
     }
+    .gallery__list {
+        max-width: 500px;
+    }
 }
 @media (min-width: 768px) {
     .gallery__list .item:last-child {
         display: block;
     }
+    .gallery__list .item:nth-last-child(n+6) {
+        margin-bottom: 10px;
+    }
     .item {
         max-width: calc(20% - 6px);
         flex-basis: calc(20% - 6px);
+
+        &__picture>img {
+            width: 16vw;
+            max-width: 230px;
+        }
+
     }
+
     .gallery {
         &__text {
-            width: 100%;
+            width: 80%;
             position: relative;
+            font-size: 15px;
+            margin-right: 0%;
             
             &::before {
                 content: "";
@@ -134,7 +159,7 @@
                 border-top: 1px solid #efefef;
                 position: absolute;
                 top: 10px;
-                left: 95px;
+                right: 350px;
             } 
         }
         &__title {
@@ -142,6 +167,10 @@
             margin-left: auto;
             margin-right: auto;
         }
-    }
 
+        &__list {
+            max-width: none;
+            justify-content: space-between;
+        }
+    }
 }
