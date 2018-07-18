@@ -421,12 +421,12 @@
 .header {
     padding: 70px 15px 20px;
     text-align: center;
-    background-image: url(../img/bg-header-small.png);
+    background: url(../img/bg-header-small.png) no-repeat;
 
     &__logo {
         width: 160px;
         height: 120px;
-        margin: 0 auto 40px;
+        margin: 0 auto 20px;
 
         img {
             width: 100%;
@@ -438,11 +438,11 @@
         position: relative;
         color: #424242;
         font-family: "Montserrat-Regular";
-        font-size: 38px;
-        line-height: 48px;
+        font-size: 31px;
+        line-height: 45px;
         text-transform: uppercase;
         padding-bottom: 15px;
-        margin-bottom: 20px;
+        margin-bottom: 13px;
 
         &::after {
             content: '';
@@ -459,12 +459,13 @@
     &__slogan {
         color: #565656;
         font-family: "Montserrat-Regular";
-        font-size: 16px;
+        font-size: 15px;
         line-height: 24px;
         margin-bottom: 40px;
 
         &--colored {
             color: #c0a38a;
+            text-transform: uppercase;
         }
     }
 
@@ -473,7 +474,7 @@
         width: 260px;
         height: 54px;
         margin: 0 auto 60px;
-        border: 1px solid #cccccc;
+        border: 1px solid #000;
 
         .sign_up {
             color: #232323;
@@ -491,6 +492,8 @@
     justify-content: center;
     align-items: center;
     color: #232323;
+    font-weight: 600;
+    font-size: 12px;
 
     &__icon {
         width: 14px;
