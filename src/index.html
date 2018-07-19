@@ -40,6 +40,10 @@
     <!-- modal window -->
     <!-- header section -->
     <header class="header">
+        <div class="header__top">
+            <div class="header__address">с 9.00 до 21.00 г. Киев, ул. Евгения Коновaльца 44а</div>
+            <a class="header__toggle" href="#openModal"></a>
+        </div>
         <div class="header__logo">
             <img src="./img/logo-320.png" alt="French logo">
         </div>
@@ -48,9 +52,7 @@
         <div class="header__button">
             <a class="sign_up" href="#openModal-window">записаться</a>
         </div>
-        <div class="scrolldown">
-            <p class="scrolldown__text">Scroll down</p>
-        </div>
+
         <div class="phone">
             <div class="phone__icon">
                 <svg viewBox="0 0 463.009 463.009">
@@ -63,12 +65,12 @@
             <a href="#openModal-window"  class="sing_up__fixed">онлайн-запись</a>
         </div>
         <div class="header__left-text">french</div>
+        <div class="scrolldown">
+                <p class="scrolldown__text">Scroll down</p>
+            </div>
         <div class="header__nav-container">
             <nav class="header__nav">
-                <div class="header__nav-visible">
-                    <div class="header-address">с 9.00 до 21.00 г. Киев, ул. Евгения Коновaльца 44а</div>
-                    <a class="header-toggle" href="#openModal"></a>
-                </div>
+
                 <div class="header-modal">
                     <div id="openModal" class="modalDialog">
                         <div>
@@ -673,9 +675,9 @@
                     <picture>
                         <source srcset="./img/logo-mobile.png" media="(max-width: 479px)">
                         <img src="./img/style.png" alt="logo">
-                    </picture> -->
-                    <!-- <img src="./img/style.png" alt=""> -->
-                <!-- </div>
+                    </picture>
+                    <img src="./img/style.png" alt="">
+                </div>
                 <h3 class="title_location">Как добраться</h3>
                 <p class="street">Находимся в Киеве, рядом<br>
                     с метро Печерская - <span> <br> ул. Евгения Коновaльца 44а</span></p>
@@ -684,6 +686,29 @@
             </section>
         </div>
     </div> -->
+    <section class="section location">
+        <div class="section__inner">
+            <div class="section__logo">
+                <img src="./img/style.png" alt="Logo picture">
+            </div>
+            <h3 class="section__title">Как добраться</h3>
+            
+            <div class="wrapp">
+                <div class="section__map">
+                    <iframe class="section__map--item"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.770234724503!2d30.532898915438587!3d50.426752379472184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf11d309ed87%3A0xaf29e1a58864758e!2z0LLRg9C70LjRhtGPINCE0LLQs9C10L3QsCDQmtC-0L3QvtCy0LDQu9GM0YbRjywgNDQsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1530472766470" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="section__img">
+                    <img class="section__img--item" src="../img/spa.jpg" alt="Spa">
+                </div>
+            </div>
+                <div class="section__info">
+                    <p class="section__info--street">Находимся в Киеве, рядом<br>
+                        с метро Печерская - <span class="bold"> <br> ул. Евгения Коновaльца 44а</span></p>
+                    <p class="section__info--time">Работаем каждый день <br><span class="bold">с 9.00 до 21.00</span></p>
+                    <p class="section__info--phone">Записывайтесь к нам по телефону <br> <span class="bold">+38(068) 898-89-81</span></p>
+                </div>
+        </div>
+    </section>
     <!-- Gallery -->
     <section class="section gallery">
         <div class="section__inner">

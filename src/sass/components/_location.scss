@@ -1,164 +1,90 @@
-body {
-    font-size: 14px;
-}
-.wrapper_location {
-    min-width: 1200px;
-    color: #1a191b;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-family: 'Montserrat-Regular';
-}
-.container_location {
-    width: 1200px;
-    margin-top: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding-top: 100px;
-    position: relative;
-    // background:  url('../img/french.png');
-    background-repeat: no-repeat;
-    background-position-x: 620px;
-    background-position-y: 50px;
-    padding-bottom: 70px;
-}
-.map {
-    width: 37%;
-    height: 580px;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 40px 23px -7px;
-    margin-left: 0;
-}
-.article_location {
-    width: 35%;
-    margin-top: 50px;
-    height: 500px;
-    background: url('../img/spa.jpg');
-    background-attachment: contain;
-    background-position-x: 600px;
-    background-position-y: -30px;
-}
-.location-info {
-    width: 19%;
-    padding-left: 50px;
-    position: relative;
-}
-.title_location {
-    font-size: 40px;
-    line-height: 43px;
-    font-weight: 300;
-    margin: 0;
-    margin-bottom: 55px;
-    padding-top: 80px;
-    position: relative;
-    font-family: 'Montserrat-Light';
-}
-.street {
-    font-size: 12px;
-    line-height: 20px;
-    color: #4b4a4a;
-    text-transform: none;
-    margin-bottom: 20px;
-}
-.location-logo {
-    position: absolute;
-    text-align: center;
-    left: 100px;
-    top: 26px;
-}
-.location-logo::before {
-    content: '';
-    border-bottom: 1px solid #7b7a7b;
-    display: inline-block;
-    width: 35px;
-    position: absolute;
-    top: 25px;
-    left: -45px;
-}
-.location-logo::after {
-    content: '';
-    border-bottom: 1px solid #7b7a7b;
-    display: inline-block;
-    width: 35px;
-    position: absolute;
-    top: 25px;
-    right: -45px;
-}
-.street>span {
-    color: #1a191b;
-    font-family: 'Montserrat-Bold';
-}
-.our_time {
-    font-size: 12px;
-    line-height: 20px;
-    color: #4b4a4a;
-    font-weight: 500;
-    text-transform: none;
-    margin-bottom: 20px;
-}
-.our_time>span {
-    color: #1a191b;
-    font-family: 'Montserrat-Bold';
-}
-.phone_us {
-    font-size: 12px;
-    line-height: 20px;
-    color: #4b4a4a;
-    font-weight: 500;
-    text-transform: none;;
-}
-.phone_us>span {
-    color: #1a191b;
-    font-family: 'Montserrat-Bold';
-}
 
-@media all and (max-width: 479px) {
-    .wrapper_location {
-        min-width: 290px;
+.section {
+    &__title {
+        line-height: 43px;
+        font-weight: 300;
+        font-size: 23px;
+        font-family: "Montserrat-Light";
+        text-transform: uppercase;
     }
-    .container_location {
-        width: 290px;
-        flex-direction: column;
-        position: relative;
-        padding-top: 0;
+    &__map {
+        
+        &--item {
+            width: 290px;
+            height: 300px;
+            
+        }
     }
-    .location-logo {
-        text-align: center;
-        left: 124px;
-        top: 10px;
-        // position: static;
-    }
-    .location-logo::before {
-        top: 17px;
-        left: -45px;
-    }
-    .location-logo::after {
-        top: 17px;
-        right: -45px;
-    }
-    .article_location {
+
+    &__img {
         display: none;
     }
-    .map {
-        width: 100%;
-        height: 400px;
-        position: absolute;
-        top: 110px;
-        box-shadow: rgba(0, 0, 0, 0.08) 0px 15px 23px -7px;
-    }
-    .location-info {
-        padding: 0;
-        width: 100%;
-    }
-    .title_location {
-        text-align: center;
-        font-size: 24px;
-        margin-bottom: 450px;
-        padding-top: 40px;
-    }
-    .street, .our_time, .phone_us {
+
+    &__info {
+        text-align: left;
+        font-family: "Montserrat-Regular";
+        color: #4b4a4a;
         font-size: 14px;
+
+        &--street {
+            padding-top: 15px;
+            line-height: 20px;
+        }
+        
+        &--time {
+            padding: 15px 0;
+            line-height: 20px;
+        }
+        &--phone {
+            line-height: 20px;
+        }
+    }
+    .bold {
+        font-weight: 900;
+        color: #000;
     }
 }
+@media (min-width: 479px) {
+    .section {
+        &__map {
+            &--item {
+                width: 450px;
+                height: 360px;
+            }
+        }
+    }
+}
+@media (min-width: 768px) {
+    .location {
+        position: relative;
+    }
+    .wrapp {
+        position: relative;
+    }
+    .section {
+        &__img {
+            display: block;
+            position: absolute;
+            top: 43px;
+            z-index: -1;
+
+            &--item {
+                width: 50%;
+            }
+        }
+        &__map {
+            width: 30%;
+            z-index: 0;
+        }
+        &__info {
+            position: absolute;
+            right: 120px;
+            top: 320px;
+        }
+    }
+    .section .location > .section__logo{
+        position: absolute;
+        right: 0;
+    }
+}
+
