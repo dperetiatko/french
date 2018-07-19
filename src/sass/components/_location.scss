@@ -56,24 +56,35 @@
 }
 @media (min-width: 768px) {
     .location {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;
         position: relative;
     }
     .wrapp {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;
+        position: relative;
     }
     .section {
         &__img {
             display: block;
+            position: absolute;
+            top: 43px;
+            z-index: -1;
 
             &--item {
                 width: 50%;
             }
         }
+        &__map {
+            width: 30%;
+            z-index: 0;
+        }
+        &__info {
+            position: absolute;
+            right: 120px;
+            top: 320px;
+        }
+    }
+    .section .location > .section__logo{
+        position: absolute;
+        right: 0;
     }
 }
 
