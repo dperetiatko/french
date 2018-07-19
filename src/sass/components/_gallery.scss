@@ -86,6 +86,10 @@
     .item:nth-last-child(n+2) {
         margin-bottom: 10px;
     }
+
+    .item:nth-of-type(n+9) {
+        display: none;
+    }
 }
 
 @media (min-width: 480px) {
@@ -119,6 +123,10 @@
                 margin-right: 0px;
             } 
         }
+    }
+
+    .gallery__list .item:nth-of-type(9) {
+        display: block;
     }
     .gallery__list .item:last-child {
         display: none;
