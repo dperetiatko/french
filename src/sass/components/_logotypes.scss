@@ -486,6 +486,9 @@
         &__item:nth-of-type(4) {
             margin-bottom: 0px;
         }
+        &__item:last-of-type {
+            margin-bottom: 0px;
+        }
     }
     .premium__list__title--primary,
     .premium__list__title--secondary,
