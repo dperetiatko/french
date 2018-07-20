@@ -1,5 +1,5 @@
 .section {
-    padding: 60px 15px;
+    padding: 50px 15px;
     text-align: center;
 
     &__logo {
@@ -46,6 +46,13 @@
 }
 
 .section__inner {
-    max-width:1200px;
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+    .section {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
 }

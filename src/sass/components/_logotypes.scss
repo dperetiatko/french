@@ -184,7 +184,11 @@
 
 @media all and (min-width: 1200px) {
     .premium {
+        padding-left: 90px;
+        padding-right: 90px;
+
         &__container {
+            padding: 0;
             align-items: flex-start;
         }
 
