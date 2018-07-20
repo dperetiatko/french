@@ -10,7 +10,7 @@
     &__map {
         
         &--item {
-            width: 290px;
+            width: 100%;
             height: 300px;
             
         }
@@ -31,7 +31,7 @@
         }
 
         &--street {
-            padding-top: 15px;
+            padding-top: 25px;
             line-height: 20px;
         }
         
@@ -52,18 +52,19 @@
     .section {
         &__map {
             &--item {
-                width: 430px;
                 height: 360px;
             }
         }
     }
 }
-@media (min-width: 768px) {
+@media (min-width: 991px) {
     .location {
         position: relative;
     }
     .wrapp {
         position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
     }
     .section {
         &__img {
@@ -82,9 +83,10 @@
         }
         &__info {
             position: absolute;
-            right: 120px;
+            right: 0;
             top: 200px;
             &--title {
+                display: block;
                 width: 200px;
                 line-height: 32px;
                 font-weight: 600;
