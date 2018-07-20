@@ -399,6 +399,8 @@
     padding: 70px 15px 20px;
     text-align: center;
     background: url(../img/bg-header-small.png) no-repeat;
+    background-color: #f5f5f5;
+    background-position: 100% 100%;
 
     &__logo {
         width: 160px;
@@ -533,7 +535,7 @@
     .header {
         background: url(../img/bg-header480.png) no-repeat;
         background-color: #f5f5f5;
-        background-position-y: 57px;
+        background-position: 100% -10%;
         padding-top: 30px;
 
         &__top {

@@ -83,13 +83,12 @@
         }
         &__info {
             position: absolute;
-            right: 0;
+            right: calc(20% - 200px);
             top: 200px;
             &--title {
                 display: block;
                 width: 200px;
                 line-height: 32px;
-                font-weight: 600;
                 font-size: 32px;
                 font-family: "Montserrat-Light";
                 text-transform: uppercase;
