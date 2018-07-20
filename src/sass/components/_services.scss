@@ -315,6 +315,13 @@
 
 .services {
     position: relative;
+    .section {
+        &__title {
+            &--rotate {
+                display: none;
+            }
+        }
+    }
     .tabs {
         &__heading {
             color: #565656;
