@@ -1,8 +1,6 @@
 .services {
     position: relative;
-<<<<<<< HEAD
 
-=======
     .section {
         &__title {
             &--rotate {
@@ -10,7 +8,6 @@
             }
         }
     }
->>>>>>> master
     .tabs {
         &__heading {
             color: #565656;
@@ -59,7 +56,7 @@
         &_content {
             margin-top: 30px;
             background-color: #f1f1f1;
-            box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.12);
+            box-shadow: -1px 4px 8px 2px rgba(0,0,0,.12);
         }
     
         &_item {
@@ -85,7 +82,7 @@
             padding: 50px 15px;
         }
     
-        .item__image {
+        &__image {
             width: 100%;
             height: 215px;
             object-fit: cover;
