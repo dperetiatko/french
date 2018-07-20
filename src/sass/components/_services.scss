@@ -1,6 +1,16 @@
 .services {
     position: relative;
+<<<<<<< HEAD
 
+=======
+    .section {
+        &__title {
+            &--rotate {
+                display: none;
+            }
+        }
+    }
+>>>>>>> master
     .tabs {
         &__heading {
             color: #565656;
