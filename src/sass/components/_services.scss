@@ -314,6 +314,7 @@
 // } 
 
 .services {
+    position: relative;
     .tabs {
         &__heading {
             color: #565656;
@@ -351,6 +352,7 @@
             &--opened {
                 display: block;
                 z-index: 2;
+                text-decoration: underline;
             }
         }
     }
@@ -488,20 +490,90 @@
     }
 }
 @media (min-width: 480px) {
-    .services .item .item__image{
-        height: 300px;
+
+
+    .services {
+        .item {
+            max-width: 100%;
+                &__image {
+                    height: 300px;
+                }
+                &__button {
+                    width: 240px;
+                    margin: 40px auto;
+                }
+                &__price {
+                    margin: 15px 0;
+                }
+                &.list__item {
+                    font-size: 12px;
+                }
+
+        }
     }
-    .services .item {
-        max-width: 100%;
+}
+@media (min-width: 768px) {
+    .section {
+        &__title {
+            &--rotate {
+                position: absolute;
+                top: 470px;
+                left: -95px;
+                transform: rotate(-90deg);
+                font-size: 30px;
+                line-height: 40px;
+                text-transform: uppercase;
+                font-family: 'Montserrat-Light';
+            }
+        }
     }
-    .services .item__button {
-        width: 240px;
-        margin: 40px auto;
-    }
-    .services .item__price {
-        margin: 15px 0;
-    }
-    .services .item .list__item {
-        font-size: 12px;
+    .services {
+        .tab {
+            margin-left: 15px;
+        }
+        .tabs {
+            &__heading {
+                display: none;
+            }
+            &__wrapper {
+                display: flex;
+                line-height: 25px;
+                width: inherit;
+                font-size: inherit;
+            }
+            &__current {
+                border: none;
+                line-height: 64px;
+            }
+            &__list {
+                display: flex;
+                position: inherit;
+                justify-content: flex-start;
+                border: none;
+                width: inherit;
+            }
+        }
+        .tab_content {
+            position: relative;
+        }
+        .item {
+            &__content {
+                position: absolute;
+                top: 0;
+                right: 0;
+                box-shadow: inset 10px -36px 0px 301px rgba(250,250,250,0.9);
+                height: 500px;
+            }
+            .item__image {
+                height: 500px;
+            }
+        }
+        .owl-nav {
+            width: 250px;
+            transform: rotate(90deg);
+            top: 270px;
+            right: -200px;
+            height: 5px;
+        }
     }
 }
