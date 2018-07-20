@@ -59,8 +59,6 @@
         display: flex;
         flex-wrap: wrap;
         margin: 0 -3px 30px;
-        justify-content: space-evenly;
-        max-width: 400px;
         margin-left: auto;
         margin-right: auto;
 
@@ -83,22 +81,27 @@
         display: block;
         width: 100%;
         object-fit: cover;
-
     }
-    .item:nth-last-child(n+2) {
-        margin-bottom: 10px;
+
+    .item {
+        margin: 3px;
+        flex-basis: calc(50% - 6px);
+
+        &__image {
+            width: 100%;
+        }
     }
 
     .item:nth-of-type(n+9) {
         display: none;
     }
-
 }
 
 .gallery__item{
     transition-delay: 50ms;
     transition-duration: 200ms;
 }
+
 .gallery__item:hover {
     transform: scale(.9);
 }
@@ -120,7 +123,7 @@
 
     .gallery {
         &__text {
-            width: 80%;
+            width: calc(100% - 6px);
             margin-right: auto;
             margin-left: auto;
             
@@ -142,10 +145,6 @@
 
     .gallery__list .item:last-child {
         display: none;
-    }
-
-    .gallery__list {
-        max-width: 500px;
     }
 }
 
