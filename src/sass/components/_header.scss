@@ -460,6 +460,15 @@
             font-family: "Montserrat-SemiBold";
             font-size: 11px;
             text-transform: uppercase;
+            display: inline-block;;
+            width: 260px;
+            height: 54px;
+            transition-delay: 50ms;
+            transition-duration: 200ms;
+
+            &:hover {
+                background-color: #ebebeb;
+            }
         }
     }
 }
