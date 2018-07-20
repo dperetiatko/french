@@ -562,6 +562,7 @@
         background-size: 100%;
         background-position-y: -25px;
         position: relative;
+        height: 700px;
 
         &__top {
             margin: 0 auto;
@@ -629,8 +630,8 @@
     .scrolldown {
         display: block;
         width: 150px;
-        margin-left: 26px;
-        margin-top: 177px;
+        margin-left: 24px;
+        margin-top: 295px;
         
         &__text {
             color: #555;
@@ -653,7 +654,7 @@
     .header__left-text {
         display: block;
         position: absolute;
-        top: 265px;
+        top: 393px;
         left: -230px;
         transform: rotate(90deg);
         color: #fff;
@@ -663,7 +664,8 @@
     .phone {
         transform: rotate(90deg);
         position: absolute;
-        right: 70px;
+        right: 118px;
+        top: 575px;
         
         &::before {
             content: "";
