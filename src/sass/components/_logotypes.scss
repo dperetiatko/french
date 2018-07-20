@@ -154,26 +154,6 @@
                     max-width: calc(100% - 20px);
                 }
             }
-
-            &__item:first-of-type {
-                margin-bottom: 0px;
-            }
-
-            &__item:nth-of-type(2) {
-                margin-bottom: 0px;
-            }
-
-            &__item:nth-of-type(3) {
-                margin-bottom: 0px;
-            }
-
-            &__item:nth-of-type(4) {
-                margin-bottom: 0px;
-            }
-
-            &__item:last-of-type {
-                margin-bottom: 0px;
-            }
             
             &__title {
                 display: block;
