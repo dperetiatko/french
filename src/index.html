@@ -118,8 +118,8 @@
                     </div>      
                 </div>
                 <div class="tab_content">
-                    <div class="tab_item">
-                        <div class="owl-carousel">
+                    <div class="tab_item tab_item--active">
+                        <div class="owl-carousel owl-carousel--1">
                             <div class="item">
                                 <img class="item__image" src="./img/nails-1.jpg" alt="Nails service">
                                 <div class="item__content">
@@ -213,9 +213,13 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="numbers numbers--1">
+                            <div class="numbers__current"></div>
+                            <div class="numbers__count"></div>
+                        </div>
                     </div>
                     <div class="tab_item">
-                        <div class="owl-carousel">
+                        <div class="owl-carousel owl-carousel--2">
                             <div class="item">
                                 <img class="item__image" src="./img/hair-9.jpg" alt="Hair service">
                                 <div class="item__content">
@@ -285,10 +289,14 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="numbers numbers--2">
+                            <div class="numbers__current"></div>
+                            <div class="numbers__count"></div>
+                        </div>
                     </div>
                     <div class="tab_item">
                         <!-- <h3>Уходовые ритуалы и лечение волос</h3> -->
-                        <div class="owl-carousel">
+                        <div class="owl-carousel owl-carousel--3">
                             <div class="item">
                                 <img class="item__image" src="./img/hair-1.jpg" alt="Hair service">
                                 <div class="item__content">
@@ -401,10 +409,14 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="numbers numbers--3">
+                            <div class="numbers__current"></div>
+                            <div class="numbers__count"></div>
+                        </div>
                     </div>
                     <div class="tab_item">
                         <!-- <h3>Макияж</h3> -->
-                        <div class="owl-carousel">
+                        <div class="owl-carousel owl-carousel--4">
                             <div class="item">
                                 <img class="item__image" src="./img/nails-8.jpg" alt="Nail service">
                                 <div class="item__content">
@@ -442,10 +454,14 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="numbers numbers--4">
+                            <div class="numbers__current"></div>
+                            <div class="numbers__count"></div>
+                        </div>
                     </div>
                     <div class="tab_item">
                         <!-- <h3>Архитектура бровей</h3> -->
-                        <div class="owl-carousel">
+                        <div class="owl-carousel owl-carousel--5">
                             <!-- <div class="item">
                                 <img class="item__image" src="./img/eyebrows-1.jpg" alt="Nail service">
                                 <div class="item__content">
@@ -473,10 +489,14 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="numbers numbers--5">
+                            <div class="numbers__current"></div>
+                            <div class="numbers__count"></div>
+                        </div>
                     </div>
                     <div class="tab_item">
                         <!-- <h3>Косметология</h3> -->
-                        <div class="owl-carousel">
+                        <div class="owl-carousel owl-carousel--6">
                             <div class="item">
                                 <img class="item__image" src="./img/cleaning-1.jpg" alt="cleaning service">
                                 <div class="item__content">
@@ -586,9 +606,13 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="numbers numbers--6">
+                            <div class="numbers__current"></div>
+                            <div class="numbers__count"></div>
+                        </div>
                     </div>
                     <div class="tab_item">
-                        <div class="owl-carousel">
+                        <div class="owl-carousel owl-carousel--7">
                             <div class="item">
                                 <img class="item__image" src="./img/laser-1.jpg" alt="laser service">
                                 <div class="item__content">
@@ -725,6 +749,10 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="numbers numbers--7">
+                            <div class="numbers__current"></div>
+                            <div class="numbers__count"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -743,7 +771,7 @@
             $(".services__wrapper .tab").click(function() {
                 var currentText = tabList[$(this).index()]
                 $(".services__wrapper .tab").removeClass("active-tab").eq($(this).index()).addClass("active-tab");
-                $(".services .tab_item").hide().eq($(this).index()).fadeIn();
+                $(".services .tab_item").removeClass("tab_item--active").hide().eq($(this).index()).fadeIn().addClass("tab_item--active");
                 $(".services .tabs__current").html(currentText);
                 $(".services .tabs__list").toggleClass("tabs__list--opened");
             }).eq(0).addClass("active-tab");
@@ -753,16 +781,130 @@
             });
 
             $(document).ready(function(){
-                $(".services .owl-carousel").owlCarousel({
-                    loop:true,
-                    responsiveClass:true,
-                    responsive:{
-                        320:{
-                            items:1,
-                            nav:true
+                var owl = $(".services .owl-carousel")
+                var firstOwl = $(".services .owl-carousel--1")
+                var secondOwl = $(".services .owl-carousel--2")
+                var thirdOwl = $(".services .owl-carousel--3")
+                var fourthOwl = $(".services .owl-carousel--4")
+                var fifthOwl = $(".services .owl-carousel--5")
+                var sixthOwl = $(".services .owl-carousel--6")
+                var seventhOwl = $(".services .owl-carousel--7")
+
+                function callback(event, number) {
+                    var items = event.item.count;     // Number of items
+                    var item = event.item.index;     // Position of the current item
+
+                    $(`.services .owl-carousel--${number} + .numbers--${number} .numbers__current`).html(`0${item + 1}`);
+                    $(`.services .owl-carousel--${number} + .numbers--${number} .numbers__count`).html(`0${items}`);
+                }
+
+                function handleChange(event) {
+                    var items = event.item.count;     // Number of items
+                    var item = event.item.index;     // Position of the current item
+
+                    $(`.services .owl-carousel + .numbers .numbers__current`).html(`0${item + 1}`);
+                    $(`.services .owl-carousel + .numbers .numbers__count`).html(`0${items}`);
+                }
+
+                firstOwl.owlCarousel({
+                    onInitialized: function(event, number) {
+                        callback(event, 1);
+                    },
+                    loop: false,
+                    responsiveClass: true,
+                    responsive: {
+                        320: {
+                            items: 1,
+                            nav: true
                         },
-                    }
+                    },
+                })
+
+                secondOwl.owlCarousel({
+                    onInitialized: function(event, number) {
+                        callback(event, 2);
+                    },
+                    loop: false,
+                    responsiveClass: true,
+                    responsive: {
+                        320: {
+                            items: 1,
+                            nav: true
+                        },
+                    },
                 });
+
+                thirdOwl.owlCarousel({
+                    onInitialized: function(event, number) {
+                        callback(event, 2);
+                    },
+                    loop: false,
+                    responsiveClass: true,
+                    responsive: {
+                        320: {
+                            items: 1,
+                            nav: true
+                        },
+                    },
+                });
+
+                fourthOwl.owlCarousel({
+                    onInitialized: function(event, number) {
+                        callback(event, 2);
+                    },
+                    loop: false,
+                    responsiveClass: true,
+                    responsive: {
+                        320: {
+                            items: 1,
+                            nav: true
+                        },
+                    },
+                });
+
+                fifthOwl.owlCarousel({
+                    onInitialized: function(event, number) {
+                        callback(event, 2);
+                    },
+                    loop: false,
+                    responsiveClass: true,
+                    responsive: {
+                        320: {
+                            items: 1,
+                            nav: true
+                        },
+                    },
+                });
+
+                sixthOwl.owlCarousel({
+                    onInitialized: function(event, number) {
+                        callback(event, 2);
+                    },
+                    loop: false,
+                    responsiveClass: true,
+                    responsive: {
+                        320: {
+                            items: 1,
+                            nav: true
+                        },
+                    },
+                });
+
+                seventhOwl.owlCarousel({
+                    onInitialized: function(event, number) {
+                        callback(event, 2);
+                    },
+                    loop: false,
+                    responsiveClass: true,
+                    responsive: {
+                        320: {
+                            items: 1,
+                            nav: true
+                        },
+                    },
+                });
+
+                owl.on('changed.owl.carousel', handleChange)
             });
         </script>
     </section>
