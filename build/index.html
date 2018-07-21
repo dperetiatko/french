@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img/favicon/favicon.png">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&amp;subset=cyrillic" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Prata" rel="stylesheet">
     <link href="css/stylesheet.css" rel="stylesheet">
     <script
         src="https://code.jquery.com/jquery-1.12.4.min.js"
@@ -20,7 +20,7 @@
 
 <body>
     <!-- modal window -->
-    <div id="openModal-window" class="modal-window">
+    <!-- <div id="openModal-window" class="modal-window">
         <div>
             <div class="modal-window-logo"></div>
             <a href="#close" title="Закрыть" class="modal-window-close">X</a>
@@ -36,13 +36,13 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div> -->
     <!-- modal window -->
     <!-- header section -->
     <header class="header">
         <div class="header__top">
             <div class="header__address">с 9.00 до 21.00 г. Киев, ул. Евгения Коновaльца 44а</div>
-            <a class="header__toggle" href="#openModal"></a>
+            <a title="Open menu" class="header__toggle"></a>
         </div>
         <div class="header__logo">
             <img src="./img/logo-320.png" alt="French logo">
@@ -52,7 +52,6 @@
         <div class="header__button">
             <a class="sign_up" href="#openModal-window">записаться</a>
         </div>
-
         <div class="phone">
             <div class="phone__icon">
                 <svg viewBox="0 0 463.009 463.009">
@@ -66,28 +65,45 @@
         </div>
         <div class="header__left-text">french</div>
         <div class="scrolldown">
-                <p class="scrolldown__text">Scroll down</p>
-            </div>
+            <p class="scrolldown__text">Scroll down</p>
+        </div>
         <div class="header__nav-container">
+            <div class="outside"></div>
             <nav class="header__nav">
-
                 <div class="header-modal">
-                    <div id="openModal" class="modalDialog">
-                        <div>
-                            <a href="#close" title="Закрыть" class="close">X</a>
-                            <ul class="header-modal-menu">
-                                <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">Услуги</a></li>
-                                <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">мастера</a></li>
-                                <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">косметика</a></li>
-                                <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">отзывы</a></li>
-                                <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">контакты</a></li>
-                            </ul>
-                            <p class="header-modal__text">beauty</p>
-                        </div>
-                    </div>
+                    <a title="Close menu" class="header__close"></a>
+                    <ul class="header-modal-menu">
+                        <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">Услуги</a></li>
+                        <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">мастера</a></li>
+                        <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">косметика</a></li>
+                        <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">отзывы</a></li>
+                        <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">контакты</a></li>
+                    </ul>
+                    <p class="header-modal__text">beauty</p>
                 </div>
             </nav>
         </div>
+        <script>
+            var headerOpen = $(".header__toggle")
+            var headerClose = $(".header__close")
+            var outside = $(".header .outside")
+
+            var handleOpen = function () {
+                $(".header").addClass("header--opened")
+                $("html").addClass("html--menu-opened")
+                $("body").addClass("body--menu-opened")
+            }
+
+            var handleClose = function () {
+                $(".header").removeClass("header--opened")
+                $("html").removeClass("html--menu-opened")
+                $("body").removeClass("body--menu-opened")
+            }
+
+            headerOpen.click(handleOpen)
+            headerClose.click(handleClose)
+            outside.click(handleClose)
+        </script>
     </header>
     <!-- header section -->
     
