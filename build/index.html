@@ -942,17 +942,23 @@
     <!-- services section -->
 
     <!-- team section -->
-        <!-- <section class="section team" name="team" id="team">
-            <div class="section__inner">
-                <div class="section__logo">
-                    <img src="./img/style.png" alt="Logo picture">
-                </div>
-                <h2 class="section__title">
-                    Наши мастера
-                </h2>
+    <section class="section team" name="team" id="team">
+        <div class="section__inner">
+            <div class="section__logo">
+                <img src="./img/style.png" alt="Logo picture">
+            </div>
+            <h2 class="section__title">
+                Наши мастера
+            </h2>
+            <div class="flex-container">
                 <div class="owl-carousel">
                     <div class="item">
-                        <img src="./img/vysokova-320.jpg" alt="Master photo" class="item__image">
+                        <picture class="item__image">
+                            <source srcset="./img/vysokova-320.jpg" media="(max-width: 479px)">
+                            <source srcset="./img/vysokova-desk.jpg" media="(max-width: 768px)">
+                            <source srcset="./img/vysokova-desk1.jpg" media="(min-width: 1200px)">
+                            <img src="./img/vysokova-desk1.jpg" alt="Master photo">
+                        </picture>
                         <div class="item__content">
                             <h3 class="item__heading">Татьяна Высокова</h3>
                             <ul class="skills-list">
@@ -978,7 +984,12 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img src="./img/vysokova-320.jpg" alt="Master photo" class="item__image">
+                        <picture class="item__image">
+                            <source srcset="./img/vysokova-320.jpg" media="(max-width: 479px)">
+                            <source srcset="./img/vysokova-desk.jpg" media="(max-width: 768px)">
+                            <source srcset="./img/vysokova-desk1.jpg" media="(min-width: 1200px)">
+                            <img src="./img/vysokova-desk1.jpg" alt="Master photo">
+                        </picture>
                         <div class="item__content">
                             <h3 class="item__heading">Татьяна Высокова</h3>
                             <ul class="skills-list">
@@ -1004,7 +1015,12 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img src="./img/vysokova-320.jpg" alt="Master photo" class="item__image">
+                        <picture class="item__image">
+                            <source srcset="./img/vysokova-320.jpg" media="(max-width: 479px)">
+                            <source srcset="./img/vysokova-desk.jpg" media="(max-width: 768px)">
+                            <source srcset="./img/vysokova-desk1.jpg" media="(min-width: 1200px)">
+                            <img src="./img/vysokova-desk1.jpg" alt="Master photo">
+                        </picture>
                         <div class="item__content">
                             <h3 class="item__heading">Татьяна Высокова</h3>
                             <ul class="skills-list">
@@ -1030,7 +1046,12 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img src="./img/vysokova-320.jpg" alt="Master photo" class="item__image">
+                        <picture class="item__image">
+                            <source srcset="./img/vysokova-320.jpg" media="(max-width: 479px)">
+                            <source srcset="./img/vysokova-desk.jpg" media="(max-width: 768px)">
+                            <source srcset="./img/vysokova-desk1.jpg" media="(min-width: 1200px)">
+                            <img src="./img/vysokova-desk1.jpg" alt="Master photo">
+                        </picture>
                         <div class="item__content">
                             <h3 class="item__heading">Татьяна Высокова</h3>
                             <ul class="skills-list">
@@ -1056,7 +1077,12 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img src="./img/vysokova-320.jpg" alt="Master photo" class="item__image">
+                        <picture class="item__image">
+                            <source srcset="./img/vysokova-320.jpg" media="(max-width: 479px)">
+                            <source srcset="./img/vysokova-desk.jpg" media="(max-width: 768px)">
+                            <source srcset="./img/vysokova-desk1.jpg" media="(min-width: 1200px)">
+                            <img src="./img/vysokova-desk1.jpg" alt="Master photo">
+                        </picture>
                         <div class="item__content">
                             <h3 class="item__heading">Татьяна Высокова</h3>
                             <ul class="skills-list">
@@ -1082,7 +1108,12 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img src="./img/vysokova-320.jpg" alt="Master photo" class="item__image">
+                        <picture class="item__image">
+                            <source srcset="./img/vysokova-320.jpg" media="(max-width: 479px)">
+                            <source srcset="./img/vysokova-desk.jpg" media="(max-width: 768px)">
+                            <source srcset="./img/vysokova-desk1.jpg" media="(min-width: 1200px)">
+                            <img src="./img/vysokova-desk1.jpg" alt="Master photo">
+                        </picture>
                         <div class="item__content">
                             <h3 class="item__heading">Татьяна Высокова</h3>
                             <ul class="skills-list">
@@ -1108,22 +1139,26 @@
                         </div>
                     </div>
                 </div>
+                <div class="sidepic">
+                    <img src="./img/master-pic.jpg" alt="master-pic" class="sidepic__item">
+                </div>
             </div>
-            <script>
-                $(document).ready(function(){
-                    $(".team .owl-carousel").owlCarousel({
-                        loop:true,
-                        responsiveClass:true,
-                        responsive:{
-                            320:{
-                                items:1,
-                                nav:true
-                            },
-                        }
-                    });
+        </div>
+        <script>
+            $(document).ready(function(){
+                $(".team .owl-carousel").owlCarousel({
+                    loop:true,
+                    responsiveClass:true,
+                    responsive:{
+                        320:{
+                            items:1,
+                            nav:true
+                        },
+                    }
                 });
-            </script>
-        </section> -->
+            });
+        </script>
+    </section>
     <!-- team section -->
     
     <div class="premium__wrapper premium" name="cosmetic" id="cosmetic">
