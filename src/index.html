@@ -73,42 +73,58 @@
                 <div class="header-modal">
                     <a title="Close menu" class="header__close"></a>
                     <ul class="header-modal-menu">
-                        <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">Услуги</a></li>
-                        <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">мастера</a></li>
-                        <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">косметика</a></li>
-                        <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">отзывы</a></li>
-                        <li class="header-modal-menu__list"><a href="#" class="header-modal-menu__item">контакты</a></li>
+                        <li class="header-modal-menu__list"><a href="#services" class="header-modal-menu__item">Услуги</a></li>
+                        <li class="header-modal-menu__list"><a href="#team" class="header-modal-menu__item">мастера</a></li>
+                        <li class="header-modal-menu__list"><a href="#cosmetic" class="header-modal-menu__item">косметика</a></li>
+                        <li class="header-modal-menu__list"><a href="#testimonials" class="header-modal-menu__item">отзывы</a></li>
+                        <li class="header-modal-menu__list"><a href="#contacts" class="header-modal-menu__item">контакты</a></li>
                     </ul>
                     <p class="header-modal__text">beauty</p>
                 </div>
             </nav>
         </div>
         <script>
-            var headerOpen = $(".header__toggle")
-            var headerClose = $(".header__close")
-            var outside = $(".header .outside")
+            $(document).ready(function() {
+                var headerOpen = $(".header__toggle")
+                var headerClose = $(".header__close")
+                var outside = $(".header .outside")
+                var anchorLink = $(".header-modal-menu__item")
 
-            var handleOpen = function () {
-                $(".header").addClass("header--opened")
-                $("html").addClass("html--menu-opened")
-                $("body").addClass("body--menu-opened")
-            }
+                var handleOpen = function () {
+                    $(".header").addClass("header--opened")
+                    $("html").addClass("html--menu-opened")
+                    $("body").addClass("body--menu-opened")
+                }
 
-            var handleClose = function () {
-                $(".header").removeClass("header--opened")
-                $("html").removeClass("html--menu-opened")
-                $("body").removeClass("body--menu-opened")
-            }
+                var handleClose = function () {
+                    $(".header").removeClass("header--opened")
+                    $("html").removeClass("html--menu-opened")
+                    $("body").removeClass("body--menu-opened")
+                }
 
-            headerOpen.click(handleOpen)
-            headerClose.click(handleClose)
-            outside.click(handleClose)
+                var anchorScroll = function () {
+                    var elementClick = $(this).attr("href")
+                    var destination = $(elementClick).offset().top;
+
+                    handleClose();
+                    jQuery("html:not(:animated),body:not(:animated)").animate({
+                        scrollTop: destination
+                    }, 800);
+
+                    return false;
+                }
+
+                headerOpen.click(handleOpen);
+                headerClose.click(handleClose);
+                outside.click(handleClose);
+                anchorLink.click(anchorScroll);
+            })
         </script>
     </header>
     <!-- header section -->
     
     <!-- services section -->
-    <section class="section services">
+    <section class="section services" name="services" id="services">
         <div class="section__inner">
             <div class="section__logo">
                 <img src="./img/style.png" alt="Logo picture">
@@ -926,7 +942,7 @@
     <!-- services section -->
 
     <!-- team section -->
-        <!-- <section class="section team">
+        <!-- <section class="section team" name="team" id="team">
             <div class="section__inner">
                 <div class="section__logo">
                     <img src="./img/style.png" alt="Logo picture">
@@ -1110,7 +1126,7 @@
         </section> -->
     <!-- team section -->
     
-    <div class="premium__wrapper premium">
+    <div class="premium__wrapper premium" name="cosmetic" id="cosmetic">
         <div class="premium__container">  
             <img src="./img/beauty.jpg" alt="Beauty woman">
             <section class="premium__section">
@@ -1152,7 +1168,7 @@
 
     <!-- Testimonials section -->
 
-    <section class="section testimonials">
+    <section class="section testimonials" name="testimonials" id="testimonials">
         <div class="section__inner testimonials__inner">
             <div class="section__logo">
                 <img src="./img/style.png" alt="Logo picture">
@@ -1326,7 +1342,7 @@
 
     <!-- Testimonials section ends -->
     
-    <section class="section location">
+    <section class="section location" name="contacts" id="contacts">
         <div class="section__inner">
             <div class="section__logo">
                 <img src="./img/style.png" alt="Logo picture">
