@@ -188,15 +188,14 @@
         &__list {
 
             padding: 0 15px 100px;
-            width: 100%;
-            max-width: 100%;
             display: flex;  
-            justify-content: space-evenly;
+            justify-content: center;
             font-family: 'Montserrat-SemiBold';
             font-size: 14px;
             line-height: 18px;
 
             &__item {
+                margin: 0 30px;
                 
                 & > img {
                     border-radius: 50%;
