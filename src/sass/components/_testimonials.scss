@@ -3,6 +3,10 @@
     background-color: #f6f6f6;
     padding: 50px 0;
 
+        &__article {
+            display: none;
+        }
+
     .item {
         padding: 15px;
         margin-top: -15px;
@@ -59,7 +63,7 @@
         &__link {
             position: absolute;
             background-color: #fff;
-            bottom: 0;
+            bottom: -1px;
             right: 0;
             width: 55px;
             height: 55px;
@@ -137,6 +141,91 @@
                 left: 0;
                 top: 0;
             }
+        }
+    }
+}
+
+@media all and (min-width: 480px) {
+    .testimonials {
+
+        .item {
+            width: 100%;
+            max-width: calc(100% - 30px);
+        }
+
+        .post {
+
+            &__link {
+                transform: scale(.9);
+                bottom: -6px;
+                right: -5px;
+                padding: 20px;
+            }
+
+            &__body {
+                padding-left: 30px;
+                padding-right: 30px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 768px) {
+    .testimonials {
+
+        &__article {
+            display: block;
+
+        }
+        
+        &__list {
+
+            padding: 0 15px 100px;
+            width: 100%;
+            max-width: 100%;
+            display: flex;  
+            justify-content: space-evenly;
+            font-family: 'Montserrat-SemiBold';
+            font-size: 14px;
+            line-height: 18px;
+
+            &__item {
+                
+                & > img {
+                    border-radius: 50%;
+                    margin-bottom: 40px;
+                    transition-delay: 50ms;
+                    transition-duration: 200ms;
+                }
+                
+                &--name {
+                    text-transform: uppercase;
+                    margin-bottom: 15px;
+                }
+
+                &--position {
+                    font-family: 'Montserrat-Regular';
+                    color: #7e7e7e;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                &:hover > img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .item {
+
+            &__content {
+                display: none;
+            }
+        }
+        .owl-carousel .owl-item .item__image {
+            display: none;
         }
     }
 }
