@@ -173,6 +173,35 @@
 
 @media all and (min-width: 768px) {
     .testimonials {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 470px;
+            top: -290px;
+            left: 0;
+            z-index: -2;
+            background-image: url('../img/test-before.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 470px;
+            bottom: -290px;
+            left: 0;
+            z-index: -1;
+            background-image: url('../img/test-after.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
 
         &__article {
             display: block;
