@@ -43,6 +43,14 @@
         background-color: #ffffff;
         box-shadow: -1px 4px 8px 2px rgba(0,0,0,.12);
 
+        &--name {
+            display: none;
+        }
+
+        &--position {
+            display: none;
+        }
+
         &__image-wrapper {
             position: relative;
         }
@@ -74,6 +82,9 @@
                 height: 100%;
                 fill: #c0a38a;
             }
+        }
+        .link--extra {
+            display: none;
         }
     }
 
@@ -171,7 +182,7 @@
     }
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 992px) {
     .testimonials {
         position: relative;
         background-color: transparent;
@@ -204,6 +215,11 @@
             background-repeat: no-repeat;
         }
 
+        .item {
+            width: 100%;
+            padding-top: 80px;
+        }
+
         &__article {
             display: block;
 
@@ -221,11 +237,20 @@
             &__item {
                 margin: 0 30px;
                 
-                & > img {
-                    border-radius: 50%;
-                    margin-bottom: 40px;
-                    transition-delay: 50ms;
-                    transition-duration: 200ms;
+                & > a  {
+                    color: #1a191b;
+                    text-decoration: none;
+
+                    & > img {
+                        border-radius: 50%;
+                        margin-bottom: 40px;
+                        transition-delay: 50ms;
+                        transition-duration: 200ms;
+                    }
+
+                    &:hover > img {
+                        transform: scale(1.1);
+                    }
                 }
                 
                 &--name {
@@ -237,24 +262,89 @@
                     font-family: 'Montserrat-Regular';
                     color: #7e7e7e;
                 }
-
-                &:hover {
-                    cursor: pointer;
-                }
-
-                &:hover > img {
-                    transform: scale(1.1);
-                }
             }
         }
+
         .item {
 
             &__content {
                 display: none;
             }
         }
+
         .owl-carousel .owl-item .item__image {
             display: none;
+        }
+
+        .post {
+            width: 70%;
+            padding-left: 5%;
+            padding-top: 50px;
+            position: relative;
+            
+                &--position {
+                    display: block;
+                    text-align: left;
+                    font-family: 'Montserrat-SemiBold';
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    color: #a9a9a9;
+                    margin-bottom: 15px;
+                }
+                &--name {
+                    display: block;
+                    text-align: left;
+                    font-family: 'Montserrat-SemiBold';
+                    font-size: 24px;
+                    line-height: 28px;
+                    margin-bottom: 45px;
+                }
+
+            &__body {
+                font-size: 12px;
+                padding: 0;
+                padding-bottom: 70px;
+                width: 40%;
+                left: 0;
+                top: 0;
+            }
+            
+            &__image-wrapper {
+                position: absolute;
+                top: -40px;
+                left: 50%;
+                width: 80%;
+                height: 100%;
+                overflow: hidden;
+
+                & > .post__image--primary {
+                    margin-bottom: 0;
+                    transform: translateY(0);
+                }
+
+                & > .post__image--secondary {
+                    transform: translateY(-15%);
+                }
+
+                & > .post__image--last{
+                    transform: translateY(-10%);
+                }
+            }
+
+            &__link {
+                padding: 0;
+                transform: scale(.7);
+                left: -80px;
+                bottom: 40px;
+                display: none;
+            }
+
+            .link--extra {
+                display: block;
+                position: static;
+                margin-left: 270px;
+                padding-bottom: 5%;
+            }
         }
     }
 }
