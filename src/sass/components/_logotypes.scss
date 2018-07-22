@@ -104,18 +104,6 @@
 @media all and (min-width: 768px) {
 
     .premium {
-        position: relative;
-
-        &::after {
-            content: '';
-            position: absolute;
-            width: calc(100% - 280px);
-            height: 400px;
-            right: 0;
-            bottom: 0;
-            background-color: #fff;
-            z-index: -1;
-        }
 
         &__container {
             display: flex;
@@ -200,8 +188,20 @@
 
 @media all and (min-width: 1200px) {
     .premium {
-        padding-left: 90px;
-        padding-right: 90px;
+        position: relative;
+        padding-left: 130px;
+        padding-right: 130px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: calc(100% - 280px);
+            height: 400px;
+            right: 0;
+            bottom: 0;
+            background-color: #fff;
+            z-index: -1;
+        }
 
         &__container {
             padding: 0;
