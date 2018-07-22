@@ -1,6 +1,6 @@
 .services {
     position: relative;
-    display: none;
+    // display: none;
 
     .section {
         &__title {
@@ -367,6 +367,7 @@
         .numbers {
             left: 100%;
             top: 50%;
+            height: 20px;
             transform: translateY(-50%) rotate(90deg);
         }
     }
