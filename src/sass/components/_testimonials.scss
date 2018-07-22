@@ -176,7 +176,6 @@
 
         .item {
             width: 100%;
-            max-width: 100%;
             padding-top: 80px;
         }
 
@@ -198,11 +197,20 @@
 
             &__item {
                 
-                & > img {
-                    border-radius: 50%;
-                    margin-bottom: 40px;
-                    transition-delay: 50ms;
-                    transition-duration: 200ms;
+                & > a  {
+                    color: #1a191b;
+                    text-decoration: none;
+
+                    & > img {
+                        border-radius: 50%;
+                        margin-bottom: 40px;
+                        transition-delay: 50ms;
+                        transition-duration: 200ms;
+                    }
+
+                    &:hover > img {
+                        transform: scale(1.1);
+                    }
                 }
                 
                 &--name {
@@ -214,16 +222,9 @@
                     font-family: 'Montserrat-Regular';
                     color: #7e7e7e;
                 }
-
-                &:hover {
-                    cursor: pointer;
-                }
-
-                &:hover > img {
-                    transform: scale(1.1);
-                }
             }
         }
+
         .item {
 
             &__content {
@@ -236,8 +237,35 @@
         }
 
         .post {
-            margin-right: 28%;
-            padding-left: 10%;
+            width: 70%;
+            padding-left: 5%;
+            position: relative;
+
+            &__body {
+                padding: 0;
+                padding-top: 100px;
+                padding-bottom: 160px;
+                width: 40%;
+                left: 0;
+                top: 0;
+            }
+            
+            &__image-wrapper {
+                position: absolute;
+                top: 40px;
+                left: 50%;
+                width: 80%;
+            }
+        }
+
+        .owl-carousel .owl-item img {
+            width: 100%;
+            height: 100%;
+            min-width: 70%;
+            position: relative;
+            left: 0;
+            top: 0;
+            margin-bottom: 0;
         }
     }
 }
