@@ -19,25 +19,6 @@
 </head>
 
 <body>
-    <!-- modal window -->
-    <!-- <div id="openModal-window" class="modal-window">
-        <div>
-            <div class="modal-window-logo"></div>
-            <a href="#close" title="Закрыть" class="modal-window-close">X</a>
-            <form class="modal-window-form">
-                <div class="modal-window-form-row">
-                    <input type="text" placeholder="Ваше имя">
-                </div>
-                <div class="modal-window-form-row">
-                    <input type="tel" placeholder="Ваш телефон">
-                </div>
-                <div class="modal-window-form-row">
-                    <input type="email" placeholder="Ваш email">
-                </div>
-            </form>
-        </div>
-    </div> -->
-    <!-- modal window -->
     <!-- header section -->
     <header class="header">
         <div class="header__top">
@@ -1139,6 +1120,10 @@
                         </div>
                     </div>
                 </div>
+                <div class="numbers numbers--7">
+                    <div class="numbers__current"></div>
+                    <div class="numbers__count"></div>
+                </div>
                 <div class="sidepic">
                     <img src="./img/master-pic.jpg" alt="master-pic" class="sidepic__item">
                 </div>
@@ -1146,9 +1131,20 @@
         </div>
         <script>
             $(document).ready(function(){
-                $(".team .owl-carousel").owlCarousel({
-                    loop:true,
+                var owlTeam = $(".team .owl-carousel")
+
+                function handleChange(event) {
+                    var items = event.item.count;     // Number of items
+                    var item = event.item.index;     // Position of the current item
+
+                    $(`.team .owl-carousel + .numbers .numbers__current`).html(`0${item + 1}`);
+                    $(`.team .owl-carousel + .numbers .numbers__count`).html(`0${items}`);
+                }
+
+                owlTeam.owlCarousel({
+                    loop:false,
                     responsiveClass:true,
+                    onInitialized:handleChange,
                     responsive:{
                         320:{
                             items:1,
@@ -1156,6 +1152,8 @@
                         },
                     }
                 });
+
+                owlTeam.on('changed.owl.carousel', handleChange)
             });
         </script>
     </section>
@@ -1345,7 +1343,7 @@
                         },
                     },
                     URLhashListener:true,
-                    autoplayHoverPause:true,
+                    autoplay:false,
                     startPosition: 'URLHash'
                 })
 
