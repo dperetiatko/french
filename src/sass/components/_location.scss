@@ -90,6 +90,10 @@
     .location {
         position: relative;
         padding-top: 90px;
+
+    .section__logo {
+        display: none;
+    }    
     }
     .wrapp {
         position: relative;
@@ -106,10 +110,6 @@
     .section {
         padding-top: 150px;
         padding-bottom: 150px;
-
-        &__logo {
-            margin-left: 40px;
-        }
 
         &__img {
             display: block;
@@ -139,6 +139,7 @@
             .section__info {
                 .section__logo--hidden {
                     display: block;
+                    margin-left: 40px;
                 }
             }
         }

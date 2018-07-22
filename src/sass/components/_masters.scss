@@ -1,4 +1,8 @@
 .team {
+
+    .flex-container {
+        position: relative;
+    }
     .owl-carousel {
         background-color: #fafafa;
         box-shadow: -1px 4px 8px 2px rgba(0,0,0,.12);
@@ -136,6 +140,37 @@
         background-size: contain !important;
         background-repeat: no-repeat !important;
     }
+
+    .numbers {
+        position: absolute;
+        bottom: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+
+        &__current {
+            color: #4b4a4a;
+            font-family: "Montserrat-SemiBold";
+            font-size: 20px;
+            padding-right: 5px;
+        }
+
+        &__count {
+            position: relative;
+            padding-left: 10px;
+            color: #696969;
+            font-family: "Montserrat-Regular";
+            font-size: 16px;
+
+            &::before {
+                content: '/';
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
 }
 @media (min-width:480px){
     .team {
@@ -146,6 +181,15 @@
                 width: 80%;
                 height: auto;
             }
+        }
+        .owl-prev {
+            left: 50%;
+            transform: translateX(-200%);
+        }
+
+        .owl-next {
+            right: 50%;
+            transform: translateX(200%);
         }
     }
 }
@@ -213,7 +257,7 @@
 
         .item {
             display: flex;
-            height: 650px;
+            height: 643px;
 
             &__content {
                 flex: 1;
@@ -223,10 +267,19 @@
                 width: 380px;
             }
         }
-        
+    .numbers {
+        top: -30px;
+        left: 130px;
+        bottom: 0;
+        height: 20px;
+    }    
     .owl-nav {
         top: -30px;
-        width: 40%;
+        width: 320px;
+        z-index: -1;
+    }
+    .owl-next {
+        right: 70%;
     }
 
         .sidepic {
