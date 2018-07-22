@@ -135,6 +135,12 @@
                             <div class="item">
                                 <img class="item__image" src="./img/nails-1.jpg" alt="Nails service">
                                 <div class="item__content">
+
+                                    <div class="item__counter item__counter--1">
+                                        <div class="item__counter--current"></div>
+                                        <div class="item__counter--count"></div>
+                                    </div>
+
                                     <h4 class="item__heading">Маникюр</h4>
                                     <p class="item__price">от 190 ₴</p>
                                     <ul class="list">
@@ -151,6 +157,12 @@
                             <div class="item">
                                 <img class="item__image" src="./img/nails-2.jpg" alt="Nails service">
                                 <div class="item__content">
+
+                                    <div class="item__counter item__counter--1">
+                                        <div class="item__counter--current"></div>
+                                        <div class="item__counter--count"></div>
+                                    </div>
+
                                     <h4 class="item__heading">Педикюр Footlogix</h4>
                                     <p class="item__price">от 450 ₴</p>
                                     <ul class="list">
@@ -808,6 +820,7 @@
 
                     $(`.services .owl-carousel--${number} + .numbers--${number} .numbers__current`).html(`0${item + 1}`);
                     $(`.services .owl-carousel--${number} + .numbers--${number} .numbers__count`).html(`0${items}`);
+                    $(`.services .owl-carousel--${number} + .item__counter--${number} .item__counter--current`).html(`0${item + 1}`);
                 }
 
                 function handleChange(event) {
@@ -816,6 +829,7 @@
 
                     $(`.services .owl-carousel + .numbers .numbers__current`).html(`0${item + 1}`);
                     $(`.services .owl-carousel + .numbers .numbers__count`).html(`0${items}`);
+                    $(`.services .owl-carousel + .item__counter .item__counter--current`).html(`0${item + 1}`);
                 }
 
                 firstOwl.owlCarousel({
