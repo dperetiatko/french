@@ -1,7 +1,6 @@
 .testimonials {
     position: relative;
     background-color: #f6f6f6;
-    padding: 50px 0;
 
         .beauty, .nail {
             display: none;
@@ -66,6 +65,13 @@
 
         &__image-wrapper {
             position: relative;
+            height: 350px;
+            margin-bottom: 20px;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
         }
 
         &__image {
@@ -178,6 +184,16 @@
         }
 
         .post {
+            &__image-wrapper {
+                height: 600px;
+                margin-bottom: 30px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
 
             &__link {
                 transform: scale(.9);
@@ -219,7 +235,8 @@
         .owl-nav {
             left: 70px;
             width: 230px;
-            top: 472px;
+            top: auto;
+            bottom: 80px;
 
             .owl-prev {
                 left: 50%;
@@ -233,17 +250,17 @@
         }
 
         .numbers--testimonials {
-            left: 199px;
+            left: 198px;
             z-index: 1;
+            top: auto;
+            bottom: 110px;
         }
 
         &__article {
             display: block;
-
         }
         
         &__list {
-
             padding: 0 15px 100px;
             display: flex;  
             justify-content: center;
@@ -287,7 +304,6 @@
         }
 
         .item {
-
             &__content {
                 display: none;
             }
@@ -304,23 +320,24 @@
             padding-bottom: 140px;
             position: relative;
             
-                &--position {
-                    display: block;
-                    text-align: left;
-                    font-family: 'Montserrat-SemiBold';
-                    font-size: 12px;
-                    text-transform: uppercase;
-                    color: #a9a9a9;
-                    margin-bottom: 15px;
-                }
-                &--name {
-                    display: block;
-                    text-align: left;
-                    font-family: 'Montserrat-SemiBold';
-                    font-size: 24px;
-                    line-height: 28px;
-                    margin-bottom: 45px;
-                }
+            &--position {
+                display: block;
+                text-align: left;
+                font-family: 'Montserrat-SemiBold';
+                font-size: 12px;
+                text-transform: uppercase;
+                color: #a9a9a9;
+                margin-bottom: 15px;
+            }
+
+            &--name {
+                display: block;
+                text-align: left;
+                font-family: 'Montserrat-SemiBold';
+                font-size: 24px;
+                line-height: 28px;
+                margin-bottom: 45px;
+            }
 
             &__body {
                 font-size: 12px;
@@ -338,7 +355,11 @@
                 width: 65%;
                 max-width: 700px;
                 height: 100%;
-                overflow: hidden;
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
 
                 & > .post__image--primary {
                     margin-bottom: 0;
@@ -355,17 +376,13 @@
             }
 
             &__link {
-                padding: 0;
-                transform: scale(.7);
-                left: -80px;
-                bottom: 40px;
+                transform: scale(1);
+                left: -1px;
+                bottom: -1px;
+                right: auto;
+                top: auto;
                 z-index: 1;
             }
-
-            .link--extra {
-                display: block;
-            }
-
         }
 
         .post--primary {
@@ -379,41 +396,21 @@
         .post--last {
             padding-bottom: 20px;
         }
-
-        .link--extra {
-                display: block;
-                position: static;
-                margin-left: 35%;
-            }
-
-            .extra--primary {
-                position: static;
-                margin-top: 20px;
-                margin-left: 105px;
-                left: 40px;
-                top: 390px;
-            }
-            
-            .extra--secondary {
-                position: static;
-                margin-top: 80px;
-                margin-left: 105px;
-                left: 40px;
-                top: 390px;
-            }
-
-            .extra--last {
-                position: static;
-                margin-top: 100px;
-                margin-left: 105px;
-                left: 40px;
-                top: 390px;
-            }
     }
 }
 
 @media all and (min-width: 1200px) {
     .testimonials {
+        padding-left: 130px;
+        padding-right: 130px;
+
+        .post__image {
+            margin-bottom: 0;
+        }
+
+        .owl-nav {
+            left: 110px;
+        }
 
         .beauty, .nail {
             display: block;
@@ -430,8 +427,7 @@
         }
 
         .numbers--testimonials {
-            left: 230px;
-            z-index: 1;
+            left: 360px;
         }
         
         .post--primary {
@@ -445,38 +441,6 @@
         .post--last {
             padding-bottom: 40px;
         }
-
-        .owl-nav {
-            left: 70px;
-            width: 230px;
-            // max-width: 300px;
-            top: 472px;
-
-            .owl-prev {
-                left: 50%;
-                transform: translateX(-140%);
-            }
-
-            .owl-next {
-                right: 50%;
-                transform: translateX(260%);
-            }
-        }
-
-        .extra--primary {
-            margin-left: 130px;
-            margin-top: 80px;
-        }
-
-        .extra--secondary {
-            margin-left: 130px;
-            margin-top: 140px;
-        }
-
-        .extra--last {
-            margin-left: 130px;
-            margin-top: 140px;
-        }
     }
 }
 
@@ -485,7 +449,7 @@
     .testimonials {
 
         .numbers--testimonials {
-            left: 360px;
+
         }
     }
 }
