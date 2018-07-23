@@ -117,7 +117,14 @@
                         Выбрать категорию:
                     </div>
                     <div class="tabs__wrapper">
-                        <div class="tabs__current">Ногтевая эстетика</div>
+                        <div class="tabs__current">
+                            Ногтевая эстетика
+                        </div>
+                        <div class="tabs__icon">
+                            <svg viewBox="0 0 59.414 59.414">
+                                <path d="M15.561 59.414L14.146 58l28.293-28.293L14.146 1.414 15.561 0l29.707 29.707z"/>
+                            </svg>
+                        </div>
                         <ul class="tabs__list">
                             <li class="tab">Ногтевая эстетика</li>
                             <li class="tab">Волосы</li>
@@ -782,6 +789,7 @@
             $(".services .tab_item").not(":first").hide();
             $(".services__wrapper .tab").click(function() {
                 var currentText = tabList[$(this).index()]
+                $(".tabs__icon").toggleClass("tabs__icon--opened");
                 $(".services__wrapper .tab").removeClass("active-tab").eq($(this).index()).addClass("active-tab");
                 $(".services .tab_item").removeClass("tab_item--active").hide().eq($(this).index()).fadeIn().addClass("tab_item--active");
                 $(".services .tabs__current").html(currentText);
@@ -789,6 +797,7 @@
             }).eq(0).addClass("active-tab");
 
             $(".services .tabs__current").click(function() {
+                $(".tabs__icon").toggleClass("tabs__icon--opened");
                 $(".services .tabs__list").toggleClass("tabs__list--opened");
             });
 
