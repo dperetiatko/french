@@ -10,14 +10,18 @@
             display: none;
         }
 
-    .section__inner .testimonials__inner{
+    .section__inner .testimonials__inner {
         .section {
             &__title {
                 font-size: 30px;
                 line-height: 40px;
             }
         }
-    }    
+    }
+
+    .section__wrapper {
+        position: relative;
+    }
 
     .item {
         padding: 15px;
@@ -145,7 +149,7 @@
 
     .numbers {
         position: absolute;
-        top: 445px;
+        top: 345px;
         align-items: center;
         display: flex;
         left: 50%;
@@ -233,10 +237,9 @@
         }
         
         .owl-nav {
-            left: 70px;
+            left: 50px;
             width: 230px;
-            top: auto;
-            bottom: 80px;
+            top: 0;
 
             .owl-prev {
                 left: 50%;
@@ -250,10 +253,8 @@
         }
 
         .numbers--testimonials {
-            left: 198px;
-            z-index: 1;
-            top: auto;
-            bottom: 110px;
+            left: 178px;
+            top: 422px;        
         }
 
         &__article {
@@ -355,23 +356,11 @@
                 width: 65%;
                 max-width: 700px;
                 height: 100%;
+                margin-bottom: 0;
 
                 img {
                     height: 100%;
-                    object-fit: cover;
-                }
-
-                & > .post__image--primary {
-                    margin-bottom: 0;
-                    transform: translateY(0);
-                }
-
-                & > .post__image--secondary {
-                    transform: translateY(-15%);
-                }
-
-                & > .post__image--last{
-                    transform: translateY(-10%);
+                    object-fit: contain;
                 }
             }
 
@@ -408,10 +397,6 @@
             margin-bottom: 0;
         }
 
-        .owl-nav {
-            left: 110px;
-        }
-
         .beauty, .nail {
             display: block;
             font-family: 'Prata-Regular';
@@ -424,10 +409,6 @@
             top: 450px;
             left: -100px;
             transform: rotateZ(90deg);
-        }
-
-        .numbers--testimonials {
-            left: 360px;
         }
         
         .post--primary {
