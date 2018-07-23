@@ -149,6 +149,9 @@
                 margin: 0 0 0 auto;
             }
         }
+        .item__counter {
+            display: none;
+        }
     }
     
     .owl-dots {
@@ -293,7 +296,7 @@
             &__current {
                 position: absolute;
                 top: 134px;
-                right: 30px;
+                right: 48px;
                 z-index: 2;
                 color: #88233b;
                 text-decoration: none;
@@ -340,11 +343,12 @@
             &__heading {
                 font-size: 20px;
                 text-align: right;
+                margin-right: 30px;
             }
 
             &__price {
                 text-align: right;
-
+                margin-right: 30px;
             }
 
             &__button {
@@ -353,6 +357,19 @@
 
             .item__image {
                 height: 570px;
+            }
+
+            .item__counter {
+                display: block;
+                position: absolute;
+                top: 25px;
+                right: 48px;
+    
+                &--current {
+                    font-family: "Montserrat-SemiBold";
+                    font-size: 16px;
+                    text-decoration: line-through;
+                }
             }
         }
         .owl-nav {
