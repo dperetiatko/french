@@ -264,6 +264,7 @@
                         margin-bottom: 40px;
                         transition-delay: 50ms;
                         transition-duration: 200ms;
+                        width: 153px;
                     }
 
                     &:hover > img {
@@ -280,10 +281,6 @@
                     font-family: 'Montserrat-Regular';
                     color: #7e7e7e;
                 }
-            }
-
-            &__item:nth-of-type(2) {
-                margin-top: 5px;
             }
         }
 
