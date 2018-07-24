@@ -57,7 +57,7 @@
     &__list {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 -3px 30px;
+        margin: 0 0 30px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -82,8 +82,8 @@
     }
 
     .item {
-        margin: 3px;
-        flex-basis: calc(50% - 6px);
+        margin: 0;
+        flex-basis: 50%;
 
         &__image {
             width: 100%;
@@ -106,8 +106,8 @@
 
 @media (min-width: 480px) {
     .item {
-        max-width: calc(33.3333% - 6px);
-        flex-basis: calc(33.3333% - 6px);
+        max-width: 33%;
+        flex-basis: 33%;
 
         &__link {
             display: block;
@@ -121,7 +121,7 @@
 
     .gallery {
         &__text {
-            width: calc(100% - 6px);
+            width: 100%;
             margin-right: auto;
             margin-left: auto;
             
@@ -152,8 +152,8 @@
     }
 
     .item {
-        max-width: calc(20% - 10px);
-        flex-basis: calc(20% - 10px);
+        max-width: 20%;
+        flex-basis: 20%;
 
         &__picture > img {
             width: 100%;
