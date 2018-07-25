@@ -39,6 +39,10 @@
             cursor: pointer;
             text-overflow: ellipsis;
             overflow: hidden;
+
+            &--desktop {
+                display: none;
+            }
         }
 
         &__icon {
@@ -323,14 +327,19 @@
             }
 
             &__current {
+                display: none;
                 position: absolute;
-                top: 134px;
-                right: 48px;
+                top: 95px;
+                left: 15px;
                 z-index: 2;
                 color: #88233b;
                 text-decoration: none;
                 border: none;
                 padding-right: 0;
+
+                &--desktop {
+                    display: block;
+                }
 
                 &::before {
                     content: "";
@@ -358,39 +367,48 @@
 
         .tab_content {
             position: relative;
+            box-shadow: none;
+            background: transparent;
         }
 
         .item {
             &__content {
                 display: flex;
                 flex-direction: column;
-                position: absolute;
+                position: relative;
                 top: 0;
                 right: 0;
-                background: linear-gradient(to right, rgba(255,255,255,0.8) 59%,rgba(244,244,244,1) 100%);
-                height: 460px;
-                width: 420px;
-                padding-top: 110px;
+                height: 440px;
+                max-width: 540px;
+                padding-top: 60px;
+                padding-right: 200px;
                 padding-bottom: 0;
+                border: 1px solid #000;
             }
 
             &__heading {
                 font-size: 20px;
-                text-align: right;
+                text-align: left;
                 margin-right: 30px;
             }
 
             &__price {
-                text-align: right;
+                text-align: left;
                 margin-right: 30px;
             }
 
             &__button {
                 margin-top: auto;
+                margin-bottom: 20px;
             }
 
             .item__image {
-                height: 570px;
+                position: absolute;
+                right: 0;
+                width: 460px;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1;
             }
 
             .item__counter {
@@ -406,12 +424,41 @@
                 }
             }
         }
+
         .owl-nav {
-            width: 250px;
-            transform: rotate(90deg);
-            top: 245px;
-            right: -160px;
-            height: 5px;
+            width: 750px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: auto;
+            height: calc(100% - 100px);
+
+            .owl-prev {
+                position: absolute;
+                opacity: 1;
+                left: 0;
+                right: auto;
+                top: 0;
+                width: 50%;
+                height: 100%;
+                transform: none;
+                opacity: 0;
+                z-index: 5;
+                cursor: url('../img/previous.png'), pointer;
+            }
+    
+            .owl-next {
+                position: absolute;
+                opacity: 1;
+                left: 50%;
+                top: 0;
+                width: 50%;
+                height: 100%;
+                transform: none;
+                opacity: 0;
+                z-index: 5;
+                cursor: url('../img/forward-arrow.png'), pointer;
+            }
         }
 
         .numbers {

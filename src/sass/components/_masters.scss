@@ -46,15 +46,17 @@
             }
         }
 
-        &__heading,
-        .form__heading,
-        .form__button {
+        &__heading {
             color: #1a191b;
             font-family: "Montserrat-SemiBold";
             font-size: 16px;
             line-height: 24px;
             margin-bottom: 20px;
             text-transform: uppercase;
+
+            &--colored {
+                color: #c0a38a;
+            }
         }
 
         .skills {
@@ -69,46 +71,38 @@
             }
 
             &__heading {
-                font-family: "Montserrat-Regular";
+                font-family: "Montserrat-SemiBold";
                 font-size: 14px;
             }
 
             &__body {
-                font-family: "Montserrat-SemiBold";
+                font-family: "Montserrat-Regular";
                 text-transform: uppercase;
                 font-size: 12px;
+
+                &--colored {
+                    color: #c0a38a;
+                }
             }
         }
 
-        .form {
+        .edu-list__items {
             position: relative;
-            margin-top: 40px;
-            z-index: 5;
+            margin-top: 10px;
+            padding-left: 30px;
+            color: #1a191b;
+            font-family: "Montserrat-Regular";
+            font-size: 11px;
+            line-height: 14px;
 
-            &__name,
-            &__phone {
-                display: block;
-                width: 100%;
-                padding: 10px 0;
-                margin-bottom: 20px;
-                border: none;
-                border-bottom: 1px solid #949494;
-                background-color: transparent;
-                font-size: 14px;
-                line-height: 24px;
-                font-family: "Montserrat-Regular";
-            }
-
-            &__button {
-                margin-top: 20px;
-                border: 1px solid #1a191b;
-                cursor: pointer;
-                background-color: transparent;
-                width: 100%;
-                padding: 10px 0;
-                text-align: center;
-                margin-bottom: 0;
-                font-size: 13px;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 7px;
+                left: 0;
+                width: 20px;
+                height: 1px;
+                background-color: #282828;
             }
         }
     }
@@ -181,6 +175,53 @@
             }
         }
     }
+
+    .form {
+        position: relative;
+        padding: 50px 30px;
+        margin-top: 40px;
+        z-index: 5;
+
+        &__name,
+        &__phone {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 1px solid #949494;
+            background-color: transparent;
+            font-size: 14px;
+            line-height: 24px;
+            font-family: "Montserrat-Regular";
+        }
+
+        &__button {
+            margin-top: 20px;
+            border: 1px solid #1a191b;
+            cursor: pointer;
+            background-color: transparent;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 0;
+            font-size: 13px;
+        }
+
+        &__heading,
+        &__button {
+            color: #1a191b;
+            font-family: "Montserrat-SemiBold";
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+
+            &--colored {
+                color: #c0a38a;
+            }
+        }
+    }
 }
 @media (min-width:480px){
     .team {
@@ -220,31 +261,32 @@
 
             &__content {
                 flex: 1;
-                padding-left: 80px;
-            }
-        }
-
-        .skills {
-            position: relative;
-
-
-            &::after {
-                content: "";
-                position: absolute;
-                width: 100%;
-                bottom: 5px;
-                border-bottom: 1px dotted #1a191b;
-                z-index: -1;
+                padding-left: 30px;
+                padding-top: 30px;
             }
 
-            &__heading {
-                background-color: #fafafa;
-                padding-right: 5px;
-            }
-
-            &__body {
-                background-color: #fafafa;
-                padding-left: 5px;
+            .skills {
+                position: relative;
+                display: block;
+    
+                &::after {
+                    content: none;
+                    position: absolute;
+                    width: 100%;
+                    bottom: 5px;
+                    border-bottom: 1px dotted #1a191b;
+                    z-index: -1;
+                }
+    
+                &__heading {
+                    // background-color: #fafafa;
+                    // padding-right: 5px;
+                }
+    
+                &__body {
+                    // background-color: #fafafa;
+                    // padding-left: 5px;
+                }
             }
         }
     }
