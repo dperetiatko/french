@@ -1377,18 +1377,32 @@
                     <div class="numbers__count"></div>
                 </div>
                 <div class="sidepic">
-                    <form action="" class="form">
+                    <form class="form" id="form">
                         <h3 class="form__heading">Хотите к этому мастеру?</h3>
-                        <input type="text" class="form__name" placeholder="Ваше имя">
-                        <input type="text" class="form__phone" placeholder="Ваш телефон">
-                        <button class="form__button">записаться к мастеру</button>
+                        <input type="text" name="name" id="form_name" class="form__name" placeholder="Ваше имя" required>
+                        <input type="text" name="phone" id="form_phone" class="form__phone" placeholder="Ваш телефон" required>
+                        <button class="form__button" id="form__button">записаться к мастеру</button>
                     </form>
                 </div>
             </div>
         </div>
         <script>
             $(document).ready(function(){
-                var owlTeam = $(".team .owl-carousel")
+                var team = [
+                    "Горностаева",
+                    "Мазина",
+                    "Авякян",
+                    "Дьяков",
+                    "Кудлай",
+                    "Трушенко",
+                    "Ковальчук",
+                    "",
+                    ""
+                ];
+
+                var masterName = "";
+
+                var owlTeam = $(".team .owl-carousel");
 
                 function handleChange(event) {
                     var items = event.item.count;     // Number of items
@@ -1396,6 +1410,7 @@
 
                     $(`.team .owl-carousel + .numbers .numbers__current`).html(`0${item + 1}`);
                     $(`.team .owl-carousel + .numbers .numbers__count`).html(`0${items}`);
+                    masterName = team[item];
                 }
 
                 owlTeam.owlCarousel({
@@ -1410,7 +1425,30 @@
                     }
                 });
 
-                owlTeam.on('changed.owl.carousel', handleChange)
+                owlTeam.on('changed.owl.carousel', handleChange);
+
+                // Form
+
+                var form = $('#form')
+                var formButton = $('#form__button')
+                var name = $('#form_name').val()
+                var phone = $('#form_phone').val()
+                var postURL = `http://innovations.kh.ua/french/order.php?name=${name}&tel=${phone}&text=${masterName}`
+                
+                formButton.click(function(e) {
+                    e.preventDefault();
+                    console.log(name, phone);
+                    // $.ajax({
+                    //     url: postURL,
+                    //     type: 'POST'
+                    // })
+                    // .done(function(data) {
+                    //     console.log(data)
+                    // })
+                    // .fail(function(jqXHR, textStatus) {
+                    //     console.log( "Request failed: " + textStatus);
+                    // });
+                });
             });
         </script>
     </section>
