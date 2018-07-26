@@ -35,14 +35,15 @@
             width: 100%;
             height: 550px;
 
-            &--vysokova img {
-                object-position: right;
-            }
-
             img {
                 height: 100%;
                 object-fit: cover;
                 object-position: top;
+            }
+
+            &--vysokova img,
+            &--diana img {
+                object-position: right;
             }
         }
 
