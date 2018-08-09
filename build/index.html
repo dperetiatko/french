@@ -543,7 +543,7 @@
                     </div>
                     <div class="tab_item">
                         <!-- <h3>Архитектура бровей</h3> -->
-                        <div class="owl-carousel owl-carousel--5">
+                        <div class="">
                             <!-- <div class="item">
                                 <img class="item__image" src="./img/eyebrows-1.jpg" alt="Nail service">
                                 <div class="item__content">
@@ -718,7 +718,7 @@
                         </div> -->
                     </div>
                     <div class="tab_item">
-                        <div class="owl-carousel owl-carousel--7">
+                        <div class="">
                             <div class="item">
                                 <img class="item__image" src="./img/laser-1.jpg" alt="laser service">
                                 <div class="item__content">
@@ -921,9 +921,7 @@
                 var secondOwl = $(".services .owl-carousel--2")
                 var thirdOwl = $(".services .owl-carousel--3")
                 var fourthOwl = $(".services .owl-carousel--4")
-                var fifthOwl = $(".services .owl-carousel--5")
                 var sixthOwl = $(".services .owl-carousel--6")
-                var seventhOwl = $(".services .owl-carousel--7")
 
                 function callback(event, number) {
                     var items = event.item.count;     // Number of items
@@ -999,35 +997,7 @@
                     },
                 });
 
-                fifthOwl.owlCarousel({
-                    onInitialized: function(event, number) {
-                        callback(event, 2);
-                    },
-                    loop: true,
-                    responsiveClass: true,
-                    responsive: {
-                        320: {
-                            items: 1,
-                            nav: true
-                        },
-                    },
-                });
-
                 sixthOwl.owlCarousel({
-                    onInitialized: function(event, number) {
-                        callback(event, 2);
-                    },
-                    loop: true,
-                    responsiveClass: true,
-                    responsive: {
-                        320: {
-                            items: 1,
-                            nav: true
-                        },
-                    },
-                });
-
-                seventhOwl.owlCarousel({
                     onInitialized: function(event, number) {
                         callback(event, 2);
                     },

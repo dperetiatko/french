@@ -9,7 +9,7 @@
     }
 
     .sidepic {
-        display: none;
+        display: block;
     }
 
     .item {
@@ -108,7 +108,7 @@
         }
     }
     .item__pic {
-        display: none
+        display: none;
     }
 
     .owl-dots {
@@ -120,6 +120,7 @@
         width: 100%;
         bottom: -40px;
         cursor: pointer;
+        z-index: 5;
 
         button {
             position: absolute;
@@ -180,7 +181,7 @@
     .form {
         position: relative;
         padding: 50px 30px;
-        margin-top: 40px;
+        margin-top: 70px;
         z-index: 5;
 
         &__name,
@@ -246,6 +247,7 @@
     .team {
         .flex-container {
             display: flex;
+            flex-direction: column;
         }
 
         .owl-carousel {
@@ -287,6 +289,14 @@
     .team {
         .section__inner {
             position: relative;
+        }
+
+        .form {
+            margin-top: 40px;
+        }
+
+        .flex-container {
+            flex-direction: row;
         }
 
         .owl-carousel {
