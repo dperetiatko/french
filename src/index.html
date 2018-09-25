@@ -10,12 +10,7 @@
     <link rel="icon" href="img/favicon/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Prata" rel="stylesheet">
     <link href="css/stylesheet.css" rel="stylesheet">
-    <script
-        src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-        crossorigin="anonymous">
-    </script>
-    <script type="text/javascript" src="./js/owl.carousel.js"></script>
+
 </head>
 
 <body>
@@ -64,46 +59,10 @@
                 </div>
             </nav>
         </div>
-        <script>
-            $(document).ready(function() {
-                var headerOpen = $(".header__toggle")
-                var headerClose = $(".header__close")
-                var outside = $(".header .outside")
-                var anchorLink = $(".header-modal-menu__item")
 
-                var handleOpen = function () {
-                    $(".header").addClass("header--opened")
-                    $("html").addClass("html--menu-opened")
-                    $("body").addClass("body--menu-opened")
-                }
-
-                var handleClose = function () {
-                    $(".header").removeClass("header--opened")
-                    $("html").removeClass("html--menu-opened")
-                    $("body").removeClass("body--menu-opened")
-                }
-
-                var anchorScroll = function () {
-                    var elementClick = $(this).attr("href")
-                    var destination = $(elementClick).offset().top;
-
-                    handleClose();
-                    jQuery("html:not(:animated),body:not(:animated)").animate({
-                        scrollTop: destination
-                    }, 800);
-
-                    return false;
-                }
-
-                headerOpen.click(handleOpen);
-                headerClose.click(handleClose);
-                outside.click(handleClose);
-                anchorLink.click(anchorScroll);
-            })
-        </script>
     </header>
     <!-- header section -->
-    
+
     <!-- services section -->
     <section class="section services" name="services" id="services">
         <div class="section__inner">
@@ -137,7 +96,7 @@
                             <li class="tab">Косметология</li>
                             <li class="tab">Лазерная эпиляция</li>
                         </ul>
-                    </div>      
+                    </div>
                 </div>
                 <div class="tab_content">
                     <div class="tab_item tab_item--active">
@@ -890,130 +849,7 @@
                 </div>
             </div>
         </div>
-        <script>
-            var tabList = [
-                'Ногтевая эстетика',
-                'Волосы',
-                'Уходовые ритуалы и лечение волос',
-                'Макияж',
-                'Паралельное выполнение сервисов',
-                'Косметология',
-                'Лезарная эпиляция',
-            ];
-            $(".services .tab_item").not(":first").hide();
-            $(".services__wrapper .tab").click(function() {
-                var currentText = tabList[$(this).index()]
-                $(".tabs__icon").toggleClass("tabs__icon--opened");
-                $(".services__wrapper .tab").removeClass("active-tab").eq($(this).index()).addClass("active-tab");
-                $(".services .tab_item").removeClass("tab_item--active").hide().eq($(this).index()).fadeIn().addClass("tab_item--active");
-                $(".services .tabs__current").html(currentText);
-                $(".services .tabs__list").toggleClass("tabs__list--opened");
-            }).eq(0).addClass("active-tab");
 
-            $(".services .tabs__current").click(function() {
-                $(".tabs__icon").toggleClass("tabs__icon--opened");
-                $(".services .tabs__list").toggleClass("tabs__list--opened");
-            });
-
-            $(document).ready(function(){
-                var owl = $(".services .owl-carousel")
-                var firstOwl = $(".services .owl-carousel--1")
-                var secondOwl = $(".services .owl-carousel--2")
-                var thirdOwl = $(".services .owl-carousel--3")
-                var fourthOwl = $(".services .owl-carousel--4")
-                var sixthOwl = $(".services .owl-carousel--6")
-
-                function callback(event, number) {
-                    var items = event.item.count;     // Number of items
-                    var item = event.item.index;     // Position of the current item
-
-                    $(`.services .owl-carousel--${number} + .numbers--${number} .numbers__current`).html(`0${item + 1}`);
-                    $(`.services .owl-carousel--${number} + .numbers--${number} .numbers__count`).html(`0${items}`);
-                    // $(`.services .owl-carousel--${number} .item__counter--${number} .item__counter--current`).html(`0${item + 1}`);
-                }
-
-                function handleChange(event) {
-                    var items = event.item.count;     // Number of items
-                    var item = event.item.index;     // Position of the current item
-
-                    $(`.services .owl-carousel + .numbers .numbers__current`).html(`0${item + 1}`);
-                    $(`.services .owl-carousel + .numbers .numbers__count`).html(`0${items}`);
-                    // $(`.services .owl-carousel .item__counter .item__counter--current`).html(`0${item + 1}`);
-                }
-
-                firstOwl.owlCarousel({
-                    onInitialized: function(event, number) {
-                        callback(event, 1);
-                    },
-                    loop: true,
-                    responsiveClass: true,
-                    responsive: {
-                        320: {
-                            items: 1,
-                            nav: true
-                        },
-                    },
-                })
-
-                secondOwl.owlCarousel({
-                    onInitialized: function(event, number) {
-                        callback(event, 2);
-                    },
-                    loop: true,
-                    responsiveClass: true,
-                    responsive: {
-                        320: {
-                            items: 1,
-                            nav: true
-                        },
-                    },
-                });
-
-                thirdOwl.owlCarousel({
-                    onInitialized: function(event, number) {
-                        callback(event, 2);
-                    },
-                    loop: true,
-                    responsiveClass: true,
-                    responsive: {
-                        320: {
-                            items: 1,
-                            nav: true
-                        },
-                    },
-                });
-
-                fourthOwl.owlCarousel({
-                    onInitialized: function(event, number) {
-                        callback(event, 2);
-                    },
-                    loop: true,
-                    responsiveClass: true,
-                    responsive: {
-                        320: {
-                            items: 1,
-                            nav: true
-                        },
-                    },
-                });
-
-                sixthOwl.owlCarousel({
-                    onInitialized: function(event, number) {
-                        callback(event, 2);
-                    },
-                    loop: true,
-                    responsiveClass: true,
-                    responsive: {
-                        320: {
-                            items: 1,
-                            nav: true
-                        },
-                    },
-                });
-
-                owl.on('changed.owl.carousel', handleChange)
-            });
-        </script>
     </section>
     <!-- services section -->
 
@@ -1174,7 +1010,7 @@
                         <picture class="item__image">
                             <!-- <source srcset="./img/vysokova-320.jpg" media="(max-width: 479px)">
                             <source srcset="./img/vysokova-desk.jpg" media="(max-width: 768px)">-->
-                            <source srcset="./img/arbenina.jpg" media="(min-width: 1200px)"> 
+                            <source srcset="./img/arbenina.jpg" media="(min-width: 1200px)">
                             <img src="./img/arbenina.jpg" alt="Master photo">
                         </picture>
                         <div class="item__content">
@@ -1209,7 +1045,7 @@
                         <picture class="item__image">
                             <!-- <source srcset="./img/vysokova-320.jpg" media="(max-width: 479px)">
                             <source srcset="./img/vysokova-desk.jpg" media="(max-width: 768px)">-->
-                            <source srcset="./img/trushenko.jpg" media="(min-width: 1200px)"> 
+                            <source srcset="./img/trushenko.jpg" media="(min-width: 1200px)">
                             <img src="./img/trushenko.jpg" alt="Master photo">
                         </picture>
                         <div class="item__content">
@@ -1247,7 +1083,7 @@
                         <picture class="item__image">
                             <!-- <source srcset="./img/vysokova-320.jpg" media="(max-width: 479px)">
                             <source srcset="./img/vysokova-desk.jpg" media="(max-width: 768px)">-->
-                            <source srcset="./img/ivanna.jpg" media="(min-width: 1200px)"> 
+                            <source srcset="./img/ivanna.jpg" media="(min-width: 1200px)">
                             <img src="./img/ivanna.jpg" alt="Master photo">
                         </picture>
                         <div class="item__content">
@@ -1356,76 +1192,12 @@
                 </div>
             </div>
         </div>
-        <script>
-            $(document).ready(function(){
-                var team = [
-                    "Горностаева",
-                    "Мазина",
-                    "Авякян",
-                    "Дьяков",
-                    "Кудлай",
-                    "Трушенко",
-                    "Ковальчук",
-                    "",
-                    ""
-                ];
 
-                var masterName = "";
-
-                var owlTeam = $(".team .owl-carousel");
-
-                function handleChange(event) {
-                    var items = event.item.count;     // Number of items
-                    var item = event.item.index;     // Position of the current item
-
-                    $(`.team .owl-carousel + .numbers .numbers__current`).html(`0${item + 1}`);
-                    $(`.team .owl-carousel + .numbers .numbers__count`).html(`0${items}`);
-                    masterName = team[item];
-                }
-
-                owlTeam.owlCarousel({
-                    loop:false,
-                    responsiveClass:true,
-                    onInitialized:handleChange,
-                    responsive:{
-                        320:{
-                            items:1,
-                            nav:true
-                        },
-                    }
-                });
-
-                owlTeam.on('changed.owl.carousel', handleChange);
-
-                // Form
-
-                var form = $('#form')
-                var formButton = $('#form__button')
-                
-                formButton.click(function(e) {
-                    e.preventDefault();
-                    var clientName = document.getElementById("form_name").value
-                    var phone = document.getElementById("form_phone").value
-                    var postURL = `http://innovations.kh.ua/french/order.php?name=${clientName}&tel=${phone}&text=${masterName}`
-
-                    $.ajax({
-                        url: postURL,
-                        type: 'POST'
-                    })
-                    .done(function(data) {
-                        console.log(data)
-                    })
-                    .fail(function(jqXHR, textStatus) {
-                        console.log( "Request failed: " + textStatus);
-                    });
-                });
-            });
-        </script>
     </section>
     <!-- team section -->
-    
+
     <div class="section premium__wrapper premium" name="cosmetic" id="cosmetic">
-        <div class="premium__container">  
+        <div class="premium__container">
             <img src="./img/brands_photo-min.jpg" alt="Beauty woman">
             <section class="premium__section">
                 <div class="section__logo  premium__logo">
@@ -1530,7 +1302,7 @@
                             <p class="post__body">
                                 Каждая девочка мечтает быть принцессой.... мне вот сегодня это удалось! Сивацкая в шоке! Одновременно делаем и ручки и ножки... Аааа...счастья полные штаны!🙈
                                 <br><br>
-                                Спасибо за это @french_nail_lab 💃🏽 Вчера, так убирала, стирала, готовила, что поломала ногти, и я быстро начала искать место, где их починят... и нашла 
+                                Спасибо за это @french_nail_lab 💃🏽 Вчера, так убирала, стирала, готовила, что поломала ногти, и я быстро начала искать место, где их починят... и нашла
                                 ЭТИ СТУЛЬЯ😂😍 Боже, как это клевоооо🙌🏽 Девочки! Вы волшебницы! Так весело, удобно и хорошо с Вами!
                             </p>
                         </div>
@@ -1595,43 +1367,13 @@
                 </div>
             </div>
         </div>
-        <script>
 
-            $(document).ready(function(){
-                var owlTestimonials = $(".owl-carousel--testimonials")
-
-                function callback(event) {
-                    var items = event.item.count;     // Number of items
-                    var item = event.item.index;     // Position of the current item
-
-                    $(`.owl-carousel--testimonials + .numbers--testimonials .numbers__current`).html(`0${item + 1}`);
-                    $(`.owl-carousel--testimonials + .numbers--testimonials .numbers__count`).html(`0${items}`);
-                }
-
-                owlTestimonials.owlCarousel({
-                    onInitialized: callback,
-                    loop: false,
-                    responsiveClass: true,
-                    responsive: {
-                        320: {
-                            items: 1,
-                            nav: true
-                        },
-                    },
-                    URLhashListener:true,
-                    autoplay:false,
-                    startPosition: 'URLHash'
-                })
-
-                owlTestimonials.on('changed.owl.carousel', callback)
-            });
-        </script>
     </section>
 
     <!-- Testimonials section ends -->
-    
+
     <section class="section location" name="contacts" id="contacts">
-        <div class="section__inner">                    
+        <div class="section__inner">
             <div class="section__logo">
                 <img src="./img/style.png" alt="Logo picture">
             </div>
@@ -1659,23 +1401,7 @@
                 </div>
             </div>
         </div>
-        <script>
-            // Initialize and add the map
-            function initMap() {
-                // The location of Uluru
-                var french = {lat: 50.4226, lng: 30.538};
-                // The map, centered at Uluru
-                var map = new google.maps.Map(
-                    document.getElementById('map'), {zoom: 18, center: french});
-                // The marker, positioned at Uluru
-                var marker = new google.maps.Marker({position: french, map: map});
-                var infowindow = new google.maps.InfoWindow({content:'<strong class="map__heading">french</strong><br>beauty and nails laboratory<br>'});
-                google.maps.event.addListener(marker, 'click', function(){
-                    infowindow.open(map, marker);
-                });
-                infowindow.open(map, marker);
-            }
-        </script>
+
         <!--Load the API from the specified URL
         * The async attribute allows the browser to render the page while the API loads
         * The key parameter will contain your own API key (which is not needed for this tutorial)
@@ -1762,11 +1488,293 @@
                         <path d="M37.8.5H10.2C4.576.5 0 5.089 0 10.731V37.27C0 42.911 4.576 47.5 10.2 47.5h27.6c5.624 0 10.2-4.589 10.2-10.23V10.731C48 5.089 43.424.5 37.8.5zM46 37.27c0 4.538-3.679 8.23-8.2 8.23H10.2c-4.522 0-8.2-3.692-8.2-8.23V19.5h12.221C11.62 22.043 10 25.584 10 29.5c0 7.72 6.28 14 14 14s14-6.28 14-14c0-3.916-1.62-7.457-4.221-10H46v17.77zM36 29.5c0 6.617-5.383 12-12 12s-12-5.383-12-12 5.383-12 12-12 12 5.383 12 12zm-4.826-12c-2.101-1.261-4.55-2-7.174-2s-5.073.739-7.174 2H2v-6.769C2 6.192 5.679 2.5 10.2 2.5h27.6c4.521 0 8.2 3.692 8.2 8.231V17.5H31.174z"/>
                         <path d="M15 29.5c0 4.962 4.037 9 9 9s9-4.038 9-9-4.037-9-9-9-9 4.038-9 9zm16 0c0 3.86-3.141 7-7 7s-7-3.14-7-7 3.141-7 7-7 7 3.14 7 7z"/>
                     </svg>
-                </a>        
+                </a>
             </div>
             <p class="footer__text">©2018. Салон красоты<br>«French beauty&nail laboratory» в Киеве.</p>
         </div>
     </footer>
+
+    <script
+        src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="./js/owl.carousel.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var headerOpen = $(".header__toggle")
+            var headerClose = $(".header__close")
+            var outside = $(".header .outside")
+            var anchorLink = $(".header-modal-menu__item")
+
+            var handleOpen = function () {
+                $(".header").addClass("header--opened")
+                $("html").addClass("html--menu-opened")
+                $("body").addClass("body--menu-opened")
+            }
+
+            var handleClose = function () {
+                $(".header").removeClass("header--opened")
+                $("html").removeClass("html--menu-opened")
+                $("body").removeClass("body--menu-opened")
+            }
+
+            var anchorScroll = function () {
+                var elementClick = $(this).attr("href")
+                var destination = $(elementClick).offset().top;
+
+                handleClose();
+                jQuery("html:not(:animated),body:not(:animated)").animate({
+                    scrollTop: destination
+                }, 800);
+
+                return false;
+            }
+
+            headerOpen.click(handleOpen);
+            headerClose.click(handleClose);
+            outside.click(handleClose);
+            anchorLink.click(anchorScroll);
+        })
+    </script>
+    <script>
+        var tabList = [
+            'Ногтевая эстетика',
+            'Волосы',
+            'Уходовые ритуалы и лечение волос',
+            'Макияж',
+            'Паралельное выполнение сервисов',
+            'Косметология',
+            'Лезарная эпиляция',
+        ];
+        $(".services .tab_item").not(":first").hide();
+        $(".services__wrapper .tab").click(function() {
+            var currentText = tabList[$(this).index()]
+            $(".tabs__icon").toggleClass("tabs__icon--opened");
+            $(".services__wrapper .tab").removeClass("active-tab").eq($(this).index()).addClass("active-tab");
+            $(".services .tab_item").removeClass("tab_item--active").hide().eq($(this).index()).fadeIn().addClass("tab_item--active");
+            $(".services .tabs__current").html(currentText);
+            $(".services .tabs__list").toggleClass("tabs__list--opened");
+        }).eq(0).addClass("active-tab");
+
+        $(".services .tabs__current").click(function() {
+            $(".tabs__icon").toggleClass("tabs__icon--opened");
+            $(".services .tabs__list").toggleClass("tabs__list--opened");
+        });
+
+        $(document).ready(function(){
+            var owl = $(".services .owl-carousel")
+            var firstOwl = $(".services .owl-carousel--1")
+            var secondOwl = $(".services .owl-carousel--2")
+            var thirdOwl = $(".services .owl-carousel--3")
+            var fourthOwl = $(".services .owl-carousel--4")
+            var sixthOwl = $(".services .owl-carousel--6")
+
+            function callback(event, number) {
+                var items = event.item.count;     // Number of items
+                var item = event.item.index;     // Position of the current item
+
+                $(`.services .owl-carousel--${number} + .numbers--${number} .numbers__current`).html(`0${item + 1}`);
+                $(`.services .owl-carousel--${number} + .numbers--${number} .numbers__count`).html(`0${items}`);
+                // $(`.services .owl-carousel--${number} .item__counter--${number} .item__counter--current`).html(`0${item + 1}`);
+            }
+
+            function handleChange(event) {
+                var items = event.item.count;     // Number of items
+                var item = event.item.index;     // Position of the current item
+
+                $(`.services .owl-carousel + .numbers .numbers__current`).html(`0${item + 1}`);
+                $(`.services .owl-carousel + .numbers .numbers__count`).html(`0${items}`);
+                // $(`.services .owl-carousel .item__counter .item__counter--current`).html(`0${item + 1}`);
+            }
+
+            firstOwl.owlCarousel({
+                onInitialized: function(event, number) {
+                    callback(event, 1);
+                },
+                loop: true,
+                responsiveClass: true,
+                responsive: {
+                    320: {
+                        items: 1,
+                        nav: true
+                    },
+                },
+            })
+
+            secondOwl.owlCarousel({
+                onInitialized: function(event, number) {
+                    callback(event, 2);
+                },
+                loop: true,
+                responsiveClass: true,
+                responsive: {
+                    320: {
+                        items: 1,
+                        nav: true
+                    },
+                },
+            });
+
+            thirdOwl.owlCarousel({
+                onInitialized: function(event, number) {
+                    callback(event, 2);
+                },
+                loop: true,
+                responsiveClass: true,
+                responsive: {
+                    320: {
+                        items: 1,
+                        nav: true
+                    },
+                },
+            });
+
+            fourthOwl.owlCarousel({
+                onInitialized: function(event, number) {
+                    callback(event, 2);
+                },
+                loop: true,
+                responsiveClass: true,
+                responsive: {
+                    320: {
+                        items: 1,
+                        nav: true
+                    },
+                },
+            });
+
+            sixthOwl.owlCarousel({
+                onInitialized: function(event, number) {
+                    callback(event, 2);
+                },
+                loop: true,
+                responsiveClass: true,
+                responsive: {
+                    320: {
+                        items: 1,
+                        nav: true
+                    },
+                },
+            });
+
+            owl.on('changed.owl.carousel', handleChange)
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            var team = [
+                "Горностаева",
+                "Мазина",
+                "Авякян",
+                "Дьяков",
+                "Кудлай",
+                "Трушенко",
+                "Ковальчук",
+                "",
+                ""
+            ];
+
+            var masterName = "";
+
+            var owlTeam = $(".team .owl-carousel");
+
+            function handleChange(event) {
+                var items = event.item.count;     // Number of items
+                var item = event.item.index;     // Position of the current item
+
+                $(`.team .owl-carousel + .numbers .numbers__current`).html(`0${item + 1}`);
+                $(`.team .owl-carousel + .numbers .numbers__count`).html(`0${items}`);
+                masterName = team[item];
+            }
+
+            owlTeam.owlCarousel({
+                loop:false,
+                responsiveClass:true,
+                onInitialized:handleChange,
+                responsive:{
+                    320:{
+                        items:1,
+                        nav:true
+                    },
+                }
+            });
+
+            owlTeam.on('changed.owl.carousel', handleChange);
+
+            // Form
+
+            var form = $('#form')
+            var formButton = $('#form__button')
+
+            formButton.click(function(e) {
+                e.preventDefault();
+                var clientName = document.getElementById("form_name").value
+                var phone = document.getElementById("form_phone").value
+                var postURL = `http://innovations.kh.ua/french/order.php?name=${clientName}&tel=${phone}&text=${masterName}`
+
+                $.ajax({
+                    url: postURL,
+                    type: 'POST'
+                })
+                .done(function(data) {
+                    console.log(data)
+                })
+                .fail(function(jqXHR, textStatus) {
+                    console.log( "Request failed: " + textStatus);
+                });
+            });
+        });
+    </script>
+    <script>
+
+        $(document).ready(function(){
+            var owlTestimonials = $(".owl-carousel--testimonials")
+
+            function callback(event) {
+                var items = event.item.count;     // Number of items
+                var item = event.item.index;     // Position of the current item
+
+                $(`.owl-carousel--testimonials + .numbers--testimonials .numbers__current`).html(`0${item + 1}`);
+                $(`.owl-carousel--testimonials + .numbers--testimonials .numbers__count`).html(`0${items}`);
+            }
+
+            owlTestimonials.owlCarousel({
+                onInitialized: callback,
+                loop: false,
+                responsiveClass: true,
+                responsive: {
+                    320: {
+                        items: 1,
+                        nav: true
+                    },
+                },
+                URLhashListener:true,
+                autoplay:false,
+                startPosition: 'URLHash'
+            })
+
+            owlTestimonials.on('changed.owl.carousel', callback)
+        });
+    </script>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            var french = {lat: 50.4226, lng: 30.538};
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 18, center: french});
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({position: french, map: map});
+            var infowindow = new google.maps.InfoWindow({content:'<strong class="map__heading">french</strong><br>beauty and nails laboratory<br>'});
+            google.maps.event.addListener(marker, 'click', function(){
+                infowindow.open(map, marker);
+            });
+            infowindow.open(map, marker);
+        }
+    </script>
 </body>
 
 </html>
